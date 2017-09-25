@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>jeff.august@beamsuntory.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>2016 National Marketing Reports</name>
+</ReportFolder>

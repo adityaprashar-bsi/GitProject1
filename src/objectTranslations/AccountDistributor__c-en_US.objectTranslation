@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Distributor</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Distributors</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Account Distributors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Name --></label>
+        <name>DistributorName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Program Partner --></label>
+        <name>DistributorProgramPartner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor --></label>
+        <name>Distributor__c</name>
+        <relationshipLabel><!-- Retail Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External Id Aperity --></label>
+        <name>External_Id_Aperity__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep ID --></label>
+        <name>SalesRepID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep Name --></label>
+        <name>SalesRepName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep Team ID --></label>
+        <name>SalesRepTeamID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source ID --></label>
+        <name>SourceID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team ID --></label>
+        <name>TeamID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated By ID --></label>
+        <name>UpdatedByID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated Date --></label>
+        <name>UpdatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Warehouse ID --></label>
+        <name>WarehouseID__c</name>
+    </fields>
+    <layouts>
+        <layout>Account Distributor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

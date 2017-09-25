@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marketing Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketing Plans</value>
+    </caseValues>
+    <fields>
+        <label><!-- MP Allocated Budget (USD) --></label>
+        <name>AllocatedBudget_USD_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- MP Allocated Budget USD (Hidden) --></label>
+        <name>AllocatedBudget_USD_Hidden__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum of all Related Marketing Plan budgets. --></help>
+        <label><!-- MP Allocated Budget --></label>
+        <name>AllocatedBudget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand Quality --></label>
+        <name>BrandQuality__c</name>
+        <relationshipLabel><!-- Marketing Plans (Brand Quality) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+        <relationshipLabel><!-- Marketing Plans (Brand) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Budget Changed From Transfer --></label>
+        <name>Budget_Changed_From_Transfer__c</name>
+    </fields>
+    <fields>
+        <label><!-- MP Budget (USD) --></label>
+        <name>Budget_USD_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- MP Budget USD (Hidden) --></label>
+        <name>Budget_USD_Hidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- MP Budget --></label>
+        <name>Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- CY Initial Budget --></label>
+        <name>CYInitialBudget__c</name>
+    </fields>
+    <fields>
+        <help><!-- MP Budget - Campaign Budget. --></help>
+        <label><!-- Campaign Unallocated Budget --></label>
+        <name>CampaignBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Allocated Budget Hidden --></label>
+        <name>CampaignBudgetHidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Allocated Budget Native --></label>
+        <name>CampaignBudgetNativeHidden__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum of all Related Campaign Budgets. --></help>
+        <label><!-- Campaign Allocated Budget --></label>
+        <name>CampaignBudget__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comment field for any updates made to budget. --></help>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>CAN</masterLabel>
+            <translation><!-- CAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Marketing</masterLabel>
+            <translation><!-- Global Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEX</masterLabel>
+            <translation><!-- MEX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation><!-- US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>Activation</masterLabel>
+            <translation><!-- Activation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advocacy</masterLabel>
+            <translation><!-- Advocacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brand Education</masterLabel>
+            <translation><!-- Brand Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Division</masterLabel>
+            <translation><!-- Central Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocktail Project</masterLabel>
+            <translation><!-- Cocktail Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Capabilities</masterLabel>
+            <translation><!-- Commercial Capabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Coast Division</masterLabel>
+            <translation><!-- East Coast Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eastern Control Division</masterLabel>
+            <translation><!-- Eastern Control Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edge</masterLabel>
+            <translation><!-- Edge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida Division</masterLabel>
+            <translation><!-- Florida Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franchise Division</masterLabel>
+            <translation><!-- Franchise Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Insights</masterLabel>
+            <translation><!-- Global Insights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Marketing</masterLabel>
+            <translation><!-- Global Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Innovations</masterLabel>
+            <translation><!-- Innovations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Luxury</masterLabel>
+            <translation><!-- Luxury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico</masterLabel>
+            <translation><!-- Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mideast Division</masterLabel>
+            <translation><!-- Mideast Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midsouth Division</masterLabel>
+            <translation><!-- Midsouth Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwest Division</masterLabel>
+            <translation><!-- Midwest Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Military</masterLabel>
+            <translation><!-- Military --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mountain Division</masterLabel>
+            <translation><!-- Mountain Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Accounts</masterLabel>
+            <translation><!-- National Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Marketing</masterLabel>
+            <translation><!-- National Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ring Fence</masterLabel>
+            <translation><!-- Ring Fence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Media</masterLabel>
+            <translation><!-- Trade Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation &amp; Other</masterLabel>
+            <translation><!-- Transportation &amp; Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Coast Division</masterLabel>
+            <translation><!-- West Coast Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Control Division</masterLabel>
+            <translation><!-- Western Control Division --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used to check uniqueness of record. --></help>
+        <label><!-- Dupe Key - Text --></label>
+        <name>Dupe_Key_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- LY Ending Budget --></label>
+        <name>LYEndingBudget__c</name>
+    </fields>
+    <fields>
+        <label><!-- LY Initial Budget --></label>
+        <name>LYInitialBudget__c</name>
+    </fields>
+    <fields>
+        <label><!-- LY Marketing Plan Name --></label>
+        <name>LYMarketingPlanName__c</name>
+        <relationshipLabel><!-- Marketing Plans (LY Marketing Plan) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Level in the Hierarchy the Marketing Plan Exists in --></help>
+        <label><!-- Marketing Plan Level --></label>
+        <name>MP_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- MP Type --></label>
+        <name>MP_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next IO Sequence --></label>
+        <name>Next_IO_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Marketing Plan --></label>
+        <name>ParentMarketingPlan__c</name>
+        <relationshipLabel><!-- Related Marketing Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Region</masterLabel>
+            <translation><!-- Central Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Regional Programming</masterLabel>
+            <translation><!-- Central Regional Programming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control States &amp; NA Region</masterLabel>
+            <translation><!-- Control States &amp; NA Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control States Region</masterLabel>
+            <translation><!-- Control States Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Region</masterLabel>
+            <translation><!-- East Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franchise Region</masterLabel>
+            <translation><!-- Franchise Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Marketing</masterLabel>
+            <translation><!-- Global Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico</masterLabel>
+            <translation><!-- Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midsouth Region</masterLabel>
+            <translation><!-- Midsouth Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Accounts Region</masterLabel>
+            <translation><!-- National Accounts Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Marketing</masterLabel>
+            <translation><!-- National Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Region</masterLabel>
+            <translation><!-- West Region --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SAP Company Code --></label>
+        <name>SAP_Company_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAP Controlling Area --></label>
+        <name>SAP_Controlling_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAP Cost Center --></label>
+        <name>SAP_Cost_Center__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <relationshipLabel><!-- Marketing Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- MP Budget - MP Allocated Budget. --></help>
+        <label><!-- MP Unallocated Budget --></label>
+        <name>UnallocatedBudget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Campaigns Allowed - Editable</layout>
+        <sections>
+            <label><!-- BI Budget Allocation --></label>
+            <section>BI Budget Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <section>Campaigns</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Plan Hierarchy --></label>
+            <section>Marketing Plan Hierarchy</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Campaigns Allowed - Not Editable</layout>
+        <sections>
+            <label><!-- BI Budget Allocation --></label>
+            <section>BI Budget Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <section>Campaigns</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Plan Hierarchy --></label>
+            <section>Marketing Plan Hierarchy</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Campaigns Prohibited - Editable</layout>
+        <sections>
+            <label><!-- BI Budget Allocation --></label>
+            <section>BI Budget Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Plan Hierarchy --></label>
+            <section>Marketing Plan Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Related Marketing Plans --></label>
+            <section>Related Marketing Plans</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Campaigns Prohibited - Not Editable</layout>
+        <sections>
+            <label><!-- BI Budget Allocation --></label>
+            <section>BI Budget Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Plan Hierarchy --></label>
+            <section>Marketing Plan Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Related Marketing Plans --></label>
+            <section>Related Marketing Plans</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Campaigns Allowed - Editable --></label>
+        <name>Campaigns_Allowed_Editable</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campaigns Allowed - Not Editable --></label>
+        <name>Campaigns_Allowed_Not_Editable</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campaigns Prohibited - Editable --></label>
+        <name>Campaigns_Prohibited_Editable</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campaigns Prohibited - Not Editable --></label>
+        <name>Campaigns_Prohibited_Not_Editable</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- MP Allocated Budget cannot exceed MP Budget. Either increase the MP Budget value or decrease the budget value on any associated Marketing Plans. --></errorMessage>
+        <name>Allocated_Budget_lessthanorequal_Budget</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campaign Allocated Budget cannot exceed MP Budget. Either increase the MP Budget value or decrease the budget value on any associated Campaigns. --></errorMessage>
+        <name>Balance_lessthan_Budget</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Comment is required when changing a Marketing Plan Budget value. --></errorMessage>
+        <name>Comments_Required_for_MPBudget_Update</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To ensure financial data integrity, we have prevented a Marketing Plan&apos;s Currency from changing after the record is initially created. If currency change is needed, please create a new Marketing Plan with the correct Currency, and transfer funds/plans. --></errorMessage>
+        <name>Currency_cannot_change_after_created</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A company code of US30 or USC0 must have a Controlling Area of 2000.
+A company code of MX10 must have a Controlling Area of 3000. --></errorMessage>
+        <name>Invalid_Co_Cd_and_Cost_Ctr_Combo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MP Budget cannot be less than zero dollars. Please update the MP Budget field. --></errorMessage>
+        <name>MPBudgetCannotbeLessThanZero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have entered an invalid Company Code or Controlling Area.  Valid Company Code values are US30, USC0, or MX10.  Valid Controlling Area values are 2000, and 3000 --></errorMessage>
+        <name>Validation_on_SAP_Reporting_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

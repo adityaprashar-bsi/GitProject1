@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;img alt=&quot;User-added image&quot; src=&quot;https://bgsw1-my.sharepoint.com/personal/anthony_fuggiti_beamsuntory_com/_layouts/15/guestaccess.aspx?guestaccesstoken=0PJ4yAyBTohmA2fdpH25DQYJGc20cI20r2ntZljdaUw%3d&amp;amp;docid=1138252ee9037478cbedab6f78e283c5b&amp;amp;rev=1&quot;&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color: #FF0000;&quot;&gt;&lt;b&gt;Calendar and Contact sync is now live for all state reps as of August 31&lt;sup&gt;st.  &lt;/sup&gt;&lt;/b&gt;&lt;/span&gt;Now you can access and create sales360 information straight from Outlook, see your calendar in sales360 and email your contacts from Outlook.&lt;br&gt;&lt;br&gt;Just follow the &lt;b&gt;Outlook Integration Training and Setup Guide&lt;/b&gt; instructions located in the Reference Materials below to learn how to set up and use the Outlook plug-in.&lt;br&gt;&lt;br&gt;Please contacts us at &lt;a href=&quot;mailto:sales360@beamsuntory.com?subject=sales360-Outlook%20Sync&quot;&gt;sales360@beamsuntory.com&lt;/a&gt; if you have any questions or concerns.</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

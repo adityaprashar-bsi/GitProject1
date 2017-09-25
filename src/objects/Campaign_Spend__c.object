@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Forecast, Actual, and Committed records for all Campaigns.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <description>The amount of the Actual line item, Committed line item, or Forecast line item.</description>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentCampaign__r.Year__c</formula>
+        <label>Campaign Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Committed_Type__c</fullName>
+        <description>PREQ = Purchase Requisition. PORD = Purchase Order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PREQ = Purchase Requisition. PORD = Purchase Order.</inlineHelpText>
+        <label>Committed Type</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Debit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Debit Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Document_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Document_Number__c</fullName>
+        <description>Represents a PR Number, or PO Number, etc. from SAP.</description>
+        <externalId>false</externalId>
+        <label>Document Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Text</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dupe_Key_Text__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <inlineHelpText>Text value to check for uniqueness in Forecast values.</inlineHelpText>
+        <label>Dupe Key Text</label>
+        <length>140</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Fiscal_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Fiscal Year</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forecast_Month_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(VALUE( ParentCampaign__r.Year__c ),
+CASE(Forecast_Month__c, 
+&apos;Jan&apos;,1,
+&apos;Feb&apos;,2,
+&apos;Mar&apos;,3,
+&apos;Apr&apos;,4,
+&apos;May&apos;,5,
+&apos;Jun&apos;,6,
+&apos;Jul&apos;,7,
+&apos;Aug&apos;,8,
+&apos;Sep&apos;,9,
+&apos;Oct&apos;,10,
+&apos;Nov&apos;,11,
+&apos;Dec&apos;,12,1)
+,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Forecast Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Month__c</fullName>
+        <description>Represents the Month that the forecast amount is applicable for.</description>
+        <externalId>false</externalId>
+        <label>Forecast Month</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GLAccount__c</fullName>
+        <description>Cost Element from SAP.</description>
+        <externalId>false</externalId>
+        <label>GL Account</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GLDescription__c</fullName>
+        <description>Cost Element description field from SAP.</description>
+        <externalId>false</externalId>
+        <label>GL Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOCode__c</fullName>
+        <externalId>false</externalId>
+        <label>IO Code</label>
+        <length>12</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Number__c</fullName>
+        <description>The SAP Line Item number.</description>
+        <externalId>false</externalId>
+        <label>Line Item Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item Text</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentCampaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Master Campaign</label>
+        <referenceTo>Campaign__c</referenceTo>
+        <relationshipLabel>Campaign Spend</relationshipLabel>
+        <relationshipName>Campaign_Spend</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Period</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Posting_Date__c</fullName>
+        <description>The Posting Date for SAP Actual.</description>
+        <externalId>false</externalId>
+        <label>Posting Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ReportingDate__c</fullName>
+        <description>A common date field that is used to compare Actuals to Committed to Forecast in reports. Actuals mirror Posting Date, Committed mirrors Debit Date, and Forecast mirrors Forecast Month  Date.</description>
+        <externalId>false</externalId>
+        <formula>IF(RecordType.Name = &quot;Forecast&quot; &amp;&amp; NOT(ISNULL(Forecast_Month_Date__c)), Forecast_Month_Date__c,
+  IF(RecordType.Name = &quot;Actual&quot; &amp;&amp; NOT(ISNULL(Posting_Date__c)), Posting_Date__c,
+    IF(RecordType.Name = &quot;Committed&quot; &amp;&amp; NOT(ISNULL(Debit_Date__c)), Debit_Date__c,      
+      null)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reporting Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <description>Name1 field from SAP.</description>
+        <externalId>false</externalId>
+        <label>Vendor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Campaign Spend</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ParentCampaign__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Amount__c</columns>
+        <columns>Forecast_Month__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Campaign_Spend_Actual_Committed</fullName>
+        <columns>NAME</columns>
+        <columns>Amount__c</columns>
+        <columns>Campaign_Year__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>IOCode__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Campaign_Spend__c.Actual,Campaign_Spend__c.Committed</value>
+        </filters>
+        <label>Campaign Spend - Actual/Committed</label>
+    </listViews>
+    <listViews>
+        <fullName>Campaign_Spend_Actual_Committed_Outdated</fullName>
+        <columns>NAME</columns>
+        <columns>Amount__c</columns>
+        <columns>Campaign_Year__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>IOCode__c</columns>
+        <columns>ParentCampaign__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Campaign_Spend__c.Actual,Campaign_Spend__c.Committed</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Campaign Spend-Actual/Committed-Outdated</label>
+        <sharedTo>
+            <role>Application_Admin</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>CS-{0000000000}</displayFormat>
+        <label>Campaign Spend ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Campaign Spend</pluralLabel>
+    <recordTypes>
+        <fullName>Actual</fullName>
+        <active>true</active>
+        <description>Actual Spend from SAP.</description>
+        <label>Actual</label>
+        <picklistValues>
+            <picklist>Forecast_Month__c</picklist>
+            <values>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>May</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Committed</fullName>
+        <active>true</active>
+        <description>Committed Spend from SAP.</description>
+        <label>Committed</label>
+        <picklistValues>
+            <picklist>Forecast_Month__c</picklist>
+            <values>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>May</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Forecast</fullName>
+        <active>true</active>
+        <description>Monthly Forecast allocations.</description>
+        <label>Forecast</label>
+        <picklistValues>
+            <picklist>Forecast_Month__c</picklist>
+            <values>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>May</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>ParentCampaign__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Forecast_Month__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ParentCampaign__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Forecast_Month__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ParentCampaign__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Amount__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Forecast_Month__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>ParentCampaign__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Forecast_Month__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ForecastCurrencyEqualsCampaign</fullName>
+        <active>false</active>
+        <description>Forecast Currency must equal Campaign Currency.</description>
+        <errorConditionFormula>IF( RecordType.DeveloperName = &quot;Forecast&quot;,  text(CurrencyIsoCode)  &lt;&gt;   text(ParentCampaign__r.CurrencyIsoCode), null)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Forecast Currency does not equal Campaign Currency.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,50 @@
+<apex:page standardController="MarketingPlan__c" extensions="CampaignMultiRecordEditor">
+<style>
+  .length {
+   width:1800px;
+}
+</style>
+    <apex:form styleClass="length" >
+        <apex:pageBlock title="" mode="maindetail" id="parentRefreshBlock">      
+            <apex:pageBlockSection title=" " columns="1" >                
+                <!--  
+                <apex:outputField value="{!MarketingPlan__c.CampaignBudget__c}" label="Campaign Allocated Budget"/>
+                <apex:outputField value="{!MarketingPlan__c.CampaignBalance__c}" label="Campaign Unallocated Budget" />
+                <apex:outputField value="{!MarketingPlan__c.Next_IO_Sequence__c}" label="Next IO Sequence" />
+                 -->
+                <apex:pageBlockSectionItem helptext="{!$ObjectType.MarketingPlan__c.Fields.CampaignBudget__c.InlineHelpText}">
+                    <apex:outputLabel value="{!$ObjectType.MarketingPlan__c.Fields.CampaignBudget__c.Label}" />
+                    <apex:outputtext value="{!MarketingPlan__c.CurrencyIsoCode} {0,number,##,###,###,###,##0.00}">
+                        <apex:param value="{!IF(MarketingPlan__c.CampaignBudget__c<>NULL, MarketingPlan__c.CampaignBudget__c,0)}" />
+                    </apex:outputtext>
+                </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem helptext="{!$ObjectType.MarketingPlan__c.Fields.CampaignBalance__c.InlineHelpText}">
+                    <apex:outputLabel value="{!$ObjectType.MarketingPlan__c.Fields.CampaignBalance__c.Label}" />
+                    <apex:outputtext value="{!MarketingPlan__c.CurrencyIsoCode} {0,number,##,###,###,###,##0.00}">
+                        <apex:param value="{!IF(MarketingPlan__c.CampaignBalance__c<>NULL, MarketingPlan__c.CampaignBalance__c,0)}" />
+                    </apex:outputtext>
+                </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem helptext="{!$ObjectType.MarketingPlan__c.Fields.Next_IO_Sequence__c.InlineHelpText}">
+                    <apex:outputLabel value="{!$ObjectType.MarketingPlan__c.Fields.Next_IO_Sequence__c.Label}" />
+                    <apex:outputField value="{!MarketingPlan__c.Next_IO_Sequence__c}"  />
+                </apex:pageBlockSectionItem>        
+            </apex:pageBlockSection>
+        </apex:pageBlock>               
+        <c:MultiRecordComponent aParentRecId="{!MyRecId}" 
+            asObjectType="{!MysObj}" 
+            aFieldList="{!MyFieldList}"
+            aRelationField="{!MyRelationField}" 
+            aLabelOverrideFieldList="{!MyLabelOverrideFieldList}"
+            aLabelOverrideTextList="{!MyLabelOverrideTextList}" 
+            aDefaultValueFieldList="{!MyDefaultValueFieldList}" 
+            aDefaultValueTextList="{!MyDefaultValueTextList}" 
+            aBlockTitle="{!MyBlockTitle}" 
+            aAllowAdd="{!MyAllowAdd}"
+            aAllowEdit="{!MyAllowEdit}" 
+            aAllowDelete="{!MyAllowDelete}"
+            aShowCreateIOButton="{!MyAllowCreateIO}" 
+            aSearchFieldList="{!MySearchFieldList}"
+            aPageController="{!this}" />
+   </apex:form>
+        
+</apex:page>

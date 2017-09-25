@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CampaignToProgramTranspose</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CampaignToProgramTranspose</value>
+    </caseValues>
+    <fields>
+        <label><!-- Channel Type --></label>
+        <name>ChannelType__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Description --></label>
+        <name>GL_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Focus --></label>
+        <name>ProgramFocus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Programming Type --></label>
+        <name>ProgrammingType__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

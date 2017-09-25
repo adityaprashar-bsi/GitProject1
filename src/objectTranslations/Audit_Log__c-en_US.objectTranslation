@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Audit Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Audit Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount of Adjustment --></label>
+        <name>Amount_of_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Plan Transfer --></label>
+        <name>Marketing_Plan_Transfer__c</name>
+        <relationshipLabel><!-- Audit Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New Total Value --></label>
+        <name>New_Total_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Total Value --></label>
+        <name>Old_Total_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Adjustment --></label>
+        <name>Reason_for_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Campaign Record --></label>
+        <name>Related_Campaign_Record__c</name>
+        <relationshipLabel><!-- Audit Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Marketing Plan --></label>
+        <name>Related_Marketing_Plan__c</name>
+        <relationshipLabel><!-- Audit Logs --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Audit Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

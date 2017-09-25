@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Program</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Brand Family Name --></label>
+        <name>BrandFamilyName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand Name --></label>
+        <name>BrandName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand Objective --></label>
+        <name>BrandObjective__c</name>
+        <picklistValues>
+            <masterLabel>Execute sampling programs</masterLabel>
+            <translation><!-- Execute sampling programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objective 2</masterLabel>
+            <translation><!-- Objective 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objective 3</masterLabel>
+            <translation><!-- Objective 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objective 4</masterLabel>
+            <translation><!-- Objective 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objective 5</masterLabel>
+            <translation><!-- Objective 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Brand Quality --></label>
+        <name>BrandQuality__c</name>
+        <relationshipLabel><!-- Programs (Brand Quality) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brand Strategy --></label>
+        <name>BrandStrategy__c</name>
+        <picklistValues>
+            <masterLabel>Drive Awareness</masterLabel>
+            <translation><!-- Drive Awareness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategy 2</masterLabel>
+            <translation><!-- Strategy 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategy 3</masterLabel>
+            <translation><!-- Strategy 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Brand Variety --></label>
+        <name>BrandVariety__c</name>
+        <relationshipLabel><!-- Programs (Brand Variety) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brand Logo --></label>
+        <name>Brand_Logo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Budget --></label>
+        <name>Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Sub-Type --></label>
+        <name>ChannelSubType__c</name>
+        <picklistValues>
+            <masterLabel>Casual</masterLabel>
+            <translation><!-- Casual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grocery Mass &amp; Drug</masterLabel>
+            <translation><!-- Grocery Mass &amp; Drug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High End</masterLabel>
+            <translation><!-- High End --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LFL</masterLabel>
+            <translation><!-- LFL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Type --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>Non-Premise</masterLabel>
+            <translation><!-- Non-Premise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise</masterLabel>
+            <translation><!-- Off Premise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise</masterLabel>
+            <translation><!-- On Premise --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CreatedByName --></label>
+        <name>CreatedByName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Name --></label>
+        <name>DistributorName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Quota Details --></label>
+        <name>DistributorQuotaDetails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor --></label>
+        <name>Distributor__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Duration --></label>
+        <name>Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Focus Type --></label>
+        <name>FocusType__c</name>
+        <picklistValues>
+            <masterLabel>#1 Priority</masterLabel>
+            <translation><!-- #1 Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cordials Kicker</masterLabel>
+            <translation><!-- Cordials Kicker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core Priority</masterLabel>
+            <translation><!-- Core Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Priority</masterLabel>
+            <translation><!-- Local Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Priority</masterLabel>
+            <translation><!-- Other Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program</masterLabel>
+            <translation><!-- Program --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funds --></label>
+        <name>Funds__c</name>
+        <picklistValues>
+            <masterLabel>BI</masterLabel>
+            <translation><!-- BI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EG</masterLabel>
+            <translation><!-- EG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Focus Calendar Priority</masterLabel>
+            <translation><!-- Focus Calendar Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LMF</masterLabel>
+            <translation><!-- LMF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IO Code --></label>
+        <name>IOCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastModifiedByName --></label>
+        <name>LastModifiedByName__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Account --></label>
+        <name>NationalAccount__c</name>
+        <relationshipLabel><!-- Programs (National Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Owner Name --></label>
+        <name>Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Focus Calendar Priority --></label>
+        <name>Parent__c</name>
+        <relationshipLabel><!-- Related Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Focus --></label>
+        <name>ProgramFocus__c</name>
+        <picklistValues>
+            <masterLabel>Consumer</masterLabel>
+            <translation><!-- Consumer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retailer</masterLabel>
+            <translation><!-- Retailer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Programming Type --></label>
+        <name>ProgrammingType__c</name>
+        <picklistValues>
+            <masterLabel>Display</masterLabel>
+            <translation><!-- Display --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentive</masterLabel>
+            <translation><!-- Incentive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing</masterLabel>
+            <translation><!-- Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promotion</masterLabel>
+            <translation><!-- Promotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sampling</masterLabel>
+            <translation><!-- Sampling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsorship</masterLabel>
+            <translation><!-- Sponsorship --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Type Name --></label>
+        <name>RecordTypeName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Priority --></label>
+        <name>Related_Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is the local priority driven from Sales Strategy? --></help>
+        <label><!-- Sales Strategy Driven --></label>
+        <name>SalesStrategyDriven__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source BI Campaign --></label>
+        <name>SourceBICampaign__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Spend Description --></label>
+        <name>SpendDescription__c</name>
+        <picklistValues>
+            <masterLabel>Ad Production Costs</masterLabel>
+            <translation><!-- Ad Production Costs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced TV Paid Advertising</masterLabel>
+            <translation><!-- Advanced TV Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cinema Paid Advertising</masterLabel>
+            <translation><!-- Cinema Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Giveaways</masterLabel>
+            <translation><!-- Consumer Giveaways --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Magazines Paid Advertising</masterLabel>
+            <translation><!-- Consumer Magazines Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Newspaper Paid Advertising</masterLabel>
+            <translation><!-- Consumer Newspaper Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Research</masterLabel>
+            <translation><!-- Consumer Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Creative Agency Fees</masterLabel>
+            <translation><!-- Creative Agency Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Relations Management</masterLabel>
+            <translation><!-- Customer Relations Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Digital Display Paid Advertising</masterLabel>
+            <translation><!-- Digital Display Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Focus Calendar Priority</masterLabel>
+            <translation><!-- Focus Calendar Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freight and Storage (National POS Only)</masterLabel>
+            <translation><!-- Freight and Storage (National POS Only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heritage Center</masterLabel>
+            <translation><!-- Heritage Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liscensing and Royalty</masterLabel>
+            <translation><!-- Liscensing and Royalty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Agency Fees</masterLabel>
+            <translation><!-- Media Agency Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Menu Printing</masterLabel>
+            <translation><!-- Menu Printing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Misc. (requires comment)</masterLabel>
+            <translation><!-- Misc. (requires comment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Paid Advertising</masterLabel>
+            <translation><!-- Mobile Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Standard Digital Units Paid Advertising</masterLabel>
+            <translation><!-- Non-Standard Digital Units Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise - Trade Event</masterLabel>
+            <translation><!-- Off Premise - Trade Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise Consumer Promotion</masterLabel>
+            <translation><!-- Off Premise Consumer Promotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise Display Installation</masterLabel>
+            <translation><!-- Off Premise Display Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise POS</masterLabel>
+            <translation><!-- Off Premise POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise Sampling</masterLabel>
+            <translation><!-- Off Premise Sampling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Premise Value Added Packaging (VAP)</masterLabel>
+            <translation><!-- Off Premise Value Added Packaging (VAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Trade Incentive</masterLabel>
+            <translation><!-- Off Trade Incentive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise - Trade Event</masterLabel>
+            <translation><!-- On Premise - Trade Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise Consumer Promotion</masterLabel>
+            <translation><!-- On Premise Consumer Promotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise Menus</masterLabel>
+            <translation><!-- On Premise Menus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise POS</masterLabel>
+            <translation><!-- On Premise POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise Sampling</masterLabel>
+            <translation><!-- On Premise Sampling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Trade Incentive</masterLabel>
+            <translation><!-- On Trade Incentive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Video Paid Advertising</masterLabel>
+            <translation><!-- Online Video Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Home</masterLabel>
+            <translation><!-- Out of Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor Paid Advertising</masterLabel>
+            <translation><!-- Outdoor Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR Agency Fees</masterLabel>
+            <translation><!-- PR Agency Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR Events</masterLabel>
+            <translation><!-- PR Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR Materials / Other Expenses</masterLabel>
+            <translation><!-- PR Materials / Other Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panel Research / Trade Data</masterLabel>
+            <translation><!-- Panel Research / Trade Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Support</masterLabel>
+            <translation><!-- Price Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio Paid Advertising</masterLabel>
+            <translation><!-- Radio Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rebates Price Support</masterLabel>
+            <translation><!-- Rebates Price Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Programs</masterLabel>
+            <translation><!-- Sales Programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Samples</masterLabel>
+            <translation><!-- Sales Samples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search Engine Optimization</masterLabel>
+            <translation><!-- Search Engine Optimization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search Paid Advertising</masterLabel>
+            <translation><!-- Search Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Content Creation and Development</masterLabel>
+            <translation><!-- Social Content Creation and Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsorship Activation</masterLabel>
+            <translation><!-- Sponsorship Activation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsorship Fees</masterLabel>
+            <translation><!-- Sponsorship Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV Paid Advertising</masterLabel>
+            <translation><!-- TV Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Digital Paid Advertising</masterLabel>
+            <translation><!-- Trade Digital Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Print Paid Advertising</masterLabel>
+            <translation><!-- Trade Print Paid Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website Creation and Development</masterLabel>
+            <translation><!-- Website Creation and Development --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory Name --></label>
+        <name>TerritoryName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory Value --></label>
+        <name>TerritoryValue__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metro Ny</masterLabel>
+            <translation><!-- Metro Ny --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montgomery County MD</masterLabel>
+            <translation><!-- Montgomery County MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NULL</masterLabel>
+            <translation><!-- NULL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No California</masterLabel>
+            <translation><!-- No California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio-CS</masterLabel>
+            <translation><!-- Ohio-CS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio-LP</masterLabel>
+            <translation><!-- Ohio-LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>So California</masterLabel>
+            <translation><!-- So California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upstate Ny</masterLabel>
+            <translation><!-- Upstate Ny --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington DC</masterLabel>
+            <translation><!-- Washington DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <relationshipLabel><!-- Programs (Territory) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Spend --></label>
+        <name>YTDActual__c</name>
+    </fields>
+    <layouts>
+        <layout>Brand Investment Program</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Financials --></label>
+            <section>Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Program Information --></label>
+            <section>Program Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EG or LMF Program</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Financials --></label>
+            <section>Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Program Information --></label>
+            <section>Program Information</section>
+        </sections>
+        <sections>
+            <label><!-- Program Segmentation --></label>
+            <section>Program Segmentation</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Focus Calendar Local Priority</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Priority Information --></label>
+            <section>Priority Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Focus Calendar National Priority</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Priority Information --></label>
+            <section>Priority Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Brand Investment Program --></label>
+        <name>Brand_Investment_Programs</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EG or LMF Program --></label>
+        <name>EG_or_LMF_Programs</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Focus Calendar Local Priority --></label>
+        <name>LocalPriority</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Focus Calendar National Priority --></label>
+        <name>National_Priority</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Budget cannot be less than zero dollars. Please update the Budget. --></errorMessage>
+        <name>Program_Budget_Cannot_Be_Negative</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date must be prior or equal to End Date. Please update the Start or End Date. --></errorMessage>
+        <name>Program_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Program Start Date year must be equal to End Date Year. Please update the Start or End Date. --></errorMessage>
+        <name>Start_Year_must_be_equal_to_End_Year</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit the name of a Brand Investment Program. --></errorMessage>
+        <name>sales360_Users_Cannot_Edit_BI_Prog_Name</name>
+    </validationRules>
+</CustomObjectTranslation>

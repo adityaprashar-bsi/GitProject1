@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campaign Spend</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campaign Spend</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount (USD) --></label>
+        <name>Amount_USD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Year --></label>
+        <name>Campaign_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- PREQ = Purchase Requisition. PORD = Purchase Order. --></help>
+        <label><!-- Committed Type --></label>
+        <name>Committed_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Code --></label>
+        <name>Company_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit Date --></label>
+        <name>Debit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Date --></label>
+        <name>Document_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Number --></label>
+        <name>Document_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Text --></label>
+        <name>Document_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text value to check for uniqueness in Forecast values. --></help>
+        <label><!-- Dupe Key Text --></label>
+        <name>Dupe_Key_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Year --></label>
+        <name>Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Date --></label>
+        <name>Forecast_Month_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Month --></label>
+        <name>Forecast_Month__c</name>
+        <picklistValues>
+            <masterLabel>Apr</masterLabel>
+            <translation><!-- Apr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aug</masterLabel>
+            <translation><!-- Aug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dec</masterLabel>
+            <translation><!-- Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb</masterLabel>
+            <translation><!-- Feb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan</masterLabel>
+            <translation><!-- Jan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jul</masterLabel>
+            <translation><!-- Jul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jun</masterLabel>
+            <translation><!-- Jun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar</masterLabel>
+            <translation><!-- Mar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nov</masterLabel>
+            <translation><!-- Nov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oct</masterLabel>
+            <translation><!-- Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sep</masterLabel>
+            <translation><!-- Sep --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GL Account --></label>
+        <name>GLAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Description --></label>
+        <name>GLDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- IO Code --></label>
+        <name>IOCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Number --></label>
+        <name>Line_Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Text --></label>
+        <name>Line_Item_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Campaign --></label>
+        <name>ParentCampaign__c</name>
+        <relationshipLabel><!-- Campaign Spend --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Period --></label>
+        <name>Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posting Date --></label>
+        <name>Posting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting Date --></label>
+        <name>ReportingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <name>Vendor__c</name>
+    </fields>
+    <layouts>
+        <layout>Actuals Layout</layout>
+        <sections>
+            <label><!-- Actual Spend Detail --></label>
+            <section>Actual Spend Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Committed Layout</layout>
+        <sections>
+            <label><!-- Committed Spend Detail --></label>
+            <section>Committed Spend Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Forecast Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast Detail --></label>
+            <section>Forecast Detail</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Actual --></label>
+        <name>Actual</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Committed --></label>
+        <name>Committed</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Forecast --></label>
+        <name>Forecast</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Forecast Currency does not equal Campaign Currency. --></errorMessage>
+        <name>ForecastCurrencyEqualsCampaign</name>
+    </validationRules>
+</CustomObjectTranslation>

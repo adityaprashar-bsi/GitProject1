@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Check_Out_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Check Out Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Close of Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PTO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Checked_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Checked-In</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Current_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Checked_In__c = TRUE, IMAGE(&quot;/servlet/servlet.FileDownload?file=015o0000001wimm&quot;,&quot;Checked-In&quot;)&amp;&quot; You are currently checked-in&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015o0000001wimn&quot;,&quot;Checked-Out&quot;)&amp;&quot; You are currently checked-out&quot;)</formula>
+        <label>Current Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Time_Logs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Time_Checked_In__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Time Checked-In</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Time_Checked_Out__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Time Checked-Out</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Log_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Log Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Check-In</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Check-Out</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Time Log</label>
+    <listViews>
+        <fullName>All_Time_Logs</fullName>
+        <columns>NAME</columns>
+        <columns>Checked_In__c</columns>
+        <columns>Current_Status__c</columns>
+        <columns>Last_Time_Checked_In__c</columns>
+        <columns>Last_Time_Checked_Out__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Time Logs</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Time Log For</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Time Logs</pluralLabel>
+    <recordTypes>
+        <fullName>Check_In</fullName>
+        <active>true</active>
+        <label>Check-In</label>
+        <picklistValues>
+            <picklist>Check_Out_Reason__c</picklist>
+            <values>
+                <fullName>Close of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Check_Out</fullName>
+        <active>true</active>
+        <label>Check-Out</label>
+        <picklistValues>
+            <picklist>Check_Out_Reason__c</picklist>
+            <values>
+                <fullName>Close of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Employee_Required</fullName>
+        <active>true</active>
+        <description>This checks if the Employee field is not empty.</description>
+        <errorConditionFormula>ISBLANK( Employee__c )</errorConditionFormula>
+        <errorDisplayField>Employee__c</errorDisplayField>
+        <errorMessage>Please select the respective Employee name.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Check_In</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Check-In</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+
+
+var timelog = new sforce.SObject(&quot;Time_Log__c&quot;); 
+var timeEntry = new sforce.SObject(&quot;Time_Entry__c&quot;);
+timelog.Id = &apos;{!Time_Log__c.Id}&apos;;
+
+var typeValue = &apos;{!Time_Log__c.RecordType}&apos;;
+console.log(typeValue);
+//alert(typeValue);
+//alert(timeEntry.Status__c);
+
+var checkOut = sforce.connection.query(&quot;SELECT Id FROM RecordType where Name = &apos;Check-Out&apos;&quot;);
+var checkOutValues = checkOut.getArray(&quot;records&quot;);
+var checkOutID = checkOutValues[0].Id;
+
+var checkIn = sforce.connection.query(&quot;SELECT Id FROM RecordType where Name = &apos;Check-In&apos;&quot;);
+var checkInValues = checkIn.getArray(&quot;records&quot;);
+var checkInID = checkInValues[0].Id;
+
+
+//timelog.Log_Action__c = &quot;Check-Out&quot;;
+//timelog.Log_Action__c = &apos;Check-Out&apos;;
+//timelog.RecordTypeId = checkOutID;
+
+
+if(typeValue == &apos;Check-Out&apos;) {
+   timelog.Log_Action__c = &apos;Check-In&apos;;
+   timelog.RecordTypeId = checkInID;
+
+}
+
+
+//timelog.RecordTypeId = RT_CheckOut;
+sforce.connection.update([timelog]);
+
+window.location.reload();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Check_Out</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Check-Out</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)} 
+
+
+var timelog = new sforce.SObject(&quot;Time_Log__c&quot;); 
+var timeEntry = new sforce.SObject(&quot;Time_Entry__c&quot;); 
+timelog.Id = &apos;{!Time_Log__c.Id}&apos;; 
+
+var typeValue = &apos;{!Time_Log__c.RecordType}&apos;; 
+console.log(typeValue); 
+//alert(typeValue); 
+//alert(timeEntry.Status__c); 
+
+var checkOut = sforce.connection.query(&quot;SELECT Id FROM RecordType where Name = &apos;Check-Out&apos;&quot;); 
+var checkOutValues = checkOut.getArray(&quot;records&quot;); 
+var checkOutID = checkOutValues[0].Id; 
+
+var checkIn = sforce.connection.query(&quot;SELECT Id FROM RecordType where Name = &apos;Check-In&apos;&quot;); 
+var checkInValues = checkIn.getArray(&quot;records&quot;); 
+var checkInID = checkInValues[0].Id; 
+
+
+if(typeValue == &apos;Check-In&apos; ) {
+   if(&apos;{!Time_Log__c.Check_Out_Reason__c}&apos; == &apos;&apos;) {
+      if(document.getElementById(&apos;customErrorMessage&apos;)) {
+      }
+      else {
+         var div = document.createElement(&apos;div&apos;); 
+         div.style.fontSize = &apos;14px&apos;; 
+         div.style.color = &apos;red&apos;; 
+         //div.style.marginLeft = &apos;10%&apos;; 
+         div.style.paddingTop = &apos;4px&apos;; 
+         div.id = &apos;customErrorMessage&apos;; 
+
+         document.getElementById(&apos;topButtonRow&apos;).appendChild(div); 
+         div.textContent = &apos;Please Specify a Check-Out Reason&apos;; 
+      }
+
+   }
+else {
+   timelog.Log_Action__c = &apos;Check-Out&apos;;
+   timelog.RecordTypeId = checkOutID;
+   sforce.connection.update([timelog]); 
+   window.location.reload();
+}
+
+}
+
+
+
+
+
+
+
+
+//window.location.reload();</url>
+    </webLinks>
+</CustomObject>

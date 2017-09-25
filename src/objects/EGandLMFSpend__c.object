@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Individual EG and LMF Budget and Spend tied to a EG / LMF Territory Budget.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ActualSpend__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Spend</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Budget__c - ActualSpend__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Budget - Actual Spend.</inlineHelpText>
+        <label>Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BrandQuality__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Free text field.</inlineHelpText>
+        <label>Brand Quality</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Tags__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Brand</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Tags__c</referenceTo>
+        <relationshipLabel>EG and LMF Spend</relationshipLabel>
+        <relationshipName>EG_and_LMF_Spend</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BudgetType__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of budget.</inlineHelpText>
+        <label>Budget Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Events / Sponsorships</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Goods</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Materials / POS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Margin Enhancement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Menu Printing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Misc (undefined)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Incentives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Programs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Samples</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sampling / Tasting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SKI Goals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Distributor__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentEGorLMF__r.Distributor__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Distributor</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentEGorLMF__c</fullName>
+        <externalId>false</externalId>
+        <label>Master EG or LMF</label>
+        <referenceTo>EG_and_LMF__c</referenceTo>
+        <relationshipLabel>EG and LMF Spend</relationshipLabel>
+        <relationshipName>EG_and_LMF_Spend</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentEGorLMF__r.Territory__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(ParentEGorLMF__r.Year__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>EG and LMF Spend</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ParentEGorLMF__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Brand__c</columns>
+        <columns>BrandQuality__c</columns>
+        <columns>Budget__c</columns>
+        <columns>ActualSpend__c</columns>
+        <columns>Balance__c</columns>
+        <columns>BudgetType__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>EG and LMF Spend</pluralLabel>
+    <recordTypes>
+        <fullName>EG_DASpend</fullName>
+        <active>true</active>
+        <description>EG / DA Spend.</description>
+        <label>EG / DA Spend</label>
+        <picklistValues>
+            <picklist>BudgetType__c</picklist>
+            <values>
+                <fullName>Events %2F Sponsorships</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Materials %2F POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Margin Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menu Printing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc %28undefined%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SKI Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Samples</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sampling %2F Tasting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LMFSpend</fullName>
+        <active>true</active>
+        <description>LMF Spend.</description>
+        <label>LMF Spend</label>
+        <picklistValues>
+            <picklist>BudgetType__c</picklist>
+            <values>
+                <fullName>Events %2F Sponsorships</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Materials %2F POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Margin Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menu Printing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc %28undefined%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SKI Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Samples</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sampling %2F Tasting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>ParentEGorLMF__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Brand__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BrandQuality__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Budget__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ActualSpend__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Balance__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BudgetType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Comments__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>ParentEGorLMF__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Brand__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BrandQuality__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Budget__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ActualSpend__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Balance__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BudgetType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Comments__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

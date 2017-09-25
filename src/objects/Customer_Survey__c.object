@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional comments / suggestions</inlineHelpText>
+        <label>Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Composite_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Tour__c,(
+Case(Tour_Guide_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0) +
+Case(Tour_Content_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0) +
+Case(Tasting_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0) +
+Case(Gift_Shop_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0) +
+Case(Food_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0))/5
+,(
+Case(Gift_Shop_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0) +
+Case(Food_Rating__c,
+&quot;1&quot;,1,
+&quot;2&quot;,2,
+&quot;3&quot;,3,
+&quot;4&quot;,4,
+&quot;5&quot;,5,0))/2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Average of Tour and Stillhouse Ratings or just the Sthillhouse Ratings if a Tour wasn&apos;t taken</inlineHelpText>
+        <label>Composite Rating</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Participant provided email address</inlineHelpText>
+        <label>Email Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Opt_In_Special_Events__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Would you like information on special events?</inlineHelpText>
+        <label>Email Opt-In Special Events</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Food_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate the food quality at Fred&apos;s Smokehouse
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Food Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Gift_Shop_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate the selection of the gift shop merchandise
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Gift Shop Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Local_Tour_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Eastern Time Zone</inlineHelpText>
+        <label>Local Tour Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Local_Tour_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Eastern Time Zone</inlineHelpText>
+        <label>Local Tour Time</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Based on Survey Location</inlineHelpText>
+        <label>Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>American Stillhouse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Urban Stillhouse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Overall_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Overall my visit here left me feeling?
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Overall Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Overall__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(Overall_Rating__c, 
+&quot;1&quot;, &quot;/img/samples/stars_100.gif&quot;,
+&quot;2&quot;, &quot;/img/samples/stars_200.gif&quot;,
+&quot;3&quot;, &quot;/img/samples/stars_300.gif&quot;, 
+&quot;4&quot;, &quot;/img/samples/stars_400.gif&quot;, 
+&quot;5&quot;, &quot;/img/samples/stars_500.gif&quot;, 
+&quot;/img/samples/stars_000.gif&quot;), 
+&quot;Overall Rating&quot;)</formula>
+        <inlineHelpText>Overall Rating</inlineHelpText>
+        <label>Overall</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tasting_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How was your tasting experience?
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Tasting Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tour_Content_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How was the content of the tour?
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Tour Content Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tour_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Eastern Time Zone</inlineHelpText>
+        <label>Tour Date Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Tour_Guide_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, how was your tour guide?
+
+1 = Needs Work
+5 = Damn Good</inlineHelpText>
+        <label>Tour Guide Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tour_Guide__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Who was your tour guide?</inlineHelpText>
+        <label>Tour Guide</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tour_Lost_Detail__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If now, why note? Other</inlineHelpText>
+        <label>Tour Lost Detail</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tour_Lost_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If no, why not?</inlineHelpText>
+        <label>Tour Lost Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not available</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Didn&apos;t fit my schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tour__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Did you take the tour?</inlineHelpText>
+        <label>Tour</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Customer Survey</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CS-{000000}</displayFormat>
+        <label>Customer Survey ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Customer Surveys</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

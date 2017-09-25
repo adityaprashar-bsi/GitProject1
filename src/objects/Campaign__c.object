@@ -1,0 +1,4329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Campaign records for all Marketing Plans.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Activation_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used for National Marketing to identify Activation Campaigns.</inlineHelpText>
+        <label>Activation Campaign?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ActualCampaignSpend__c</fullName>
+        <description>Sum of Actual spend sent from SAP.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of Actual Spend sent from SAP.</inlineHelpText>
+        <label>Actual Campaign Spend</label>
+        <summarizedField>Campaign_Spend__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Campaign_Spend__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Campaign_Spend__c.ParentCampaign__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Quality__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand Quality</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Tags__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Brand Quality</value>
+            </filterItems>
+            <filterItems>
+                <field>Tags__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Tags__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <description>Brand inherited from parent Marketing Plan.</description>
+        <externalId>false</externalId>
+        <formula>ParentMarketingPlan__r.Brand__r.Name</formula>
+        <label>Brand</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignBalance__c</fullName>
+        <description>Campaign Budget - (Actual Campaign Spend + Committed Campaign Spend)</description>
+        <externalId>false</externalId>
+        <formula>PlannedCampaignSpend__c  - ( ActualCampaignSpend__c  +  CommittedCampaignSpend__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Campaign Budget - (Actual Campaign Spend + Committed Campaign Spend).</inlineHelpText>
+        <label>Campaign Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CampaignBrand__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Brand</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ardmore</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auchentoshan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Basil Hayden</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bowmore</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Calico Jack</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canadian Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cien Anos</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cien Anos RTD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Courvoisier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cruzan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DeKuyper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Effen</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>El Tesoro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fundador</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glen Garioch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hacienda</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hornitos</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Irish Whiskeys</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Apple</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Devils Cut</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Family</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Flavors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Ghost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jim Beam Red Stag</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kamora</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kessler Blend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knob Creek</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Laphroaig</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Larios</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Makers Mark</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>McClellands</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Midori</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multibrand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pinnacle Vodka</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauza</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauza 901</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauza Extra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauza XA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Skinny Girl</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suntory Mixables</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suntory Whiskey</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teachers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Terry Centario</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Olds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tres Gen</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Windsor Canadian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alberta Premium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alberta Pure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alberta Springs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banff Ice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooleys</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glengarioch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mcclelland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Small Batch Bourbon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hibiki</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plum Dew</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTD Jim Beam</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yamasaki</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alberta Rye</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CampaignStatus__c</fullName>
+        <description>Field used to view the current status of the Campaign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field used to view the current status of the Campaign.</inlineHelpText>
+        <label>Campaign Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CampaignType__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incentives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National POS (Finance Only)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Programming</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Balance_Budget_Actuals__c</fullName>
+        <externalId>false</externalId>
+        <formula>PlannedCampaignSpend__c - ( ActualCampaignSpend__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign Balance (Budget  - Actuals)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Used to capture Budget comments anytime Budget is modified.</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CommittedCampaignSpend__c</fullName>
+        <description>Sum of Committed Spend sent from SAP.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of Committed Spend sent from SAP.</inlineHelpText>
+        <label>Committed Campaign Spend</label>
+        <summarizedField>Campaign_Spend__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Campaign_Spend__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Committed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Campaign_Spend__c.ParentCampaign__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Committed_Actual_Spend__c</fullName>
+        <externalId>false</externalId>
+        <formula>ActualCampaignSpend__c +  CommittedCampaignSpend__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Committed + Actual Spend</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( ParentMarketingPlan__r.Country__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of Campaign.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DistributorQuotaDetails__c</fullName>
+        <description>The Distributor Quota Details as it&apos;s found on the mirrored program.</description>
+        <externalId>false</externalId>
+        <formula>Mirrored_Program__r.DistributorQuotaDetails__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The Distributor Quota Details as it&apos;s found on the mirrored program in which the state managers are managing this field</inlineHelpText>
+        <label>Distributor Quota Details</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distributor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Distributor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Distributor</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.ProgramPartner__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Campaigns (Distributor)</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <externalId>false</externalId>
+        <formula>text ( ParentMarketingPlan__r.Division__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Division</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ForecastedCampaignSpend__c</fullName>
+        <description>Sum of Forecasted Amount.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of Forecasted Amount.</inlineHelpText>
+        <label>Forecasted Campaign Budget</label>
+        <summarizedField>Campaign_Spend__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Campaign_Spend__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Forecast</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Campaign_Spend__c.ParentCampaign__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>GLAccountType__c</fullName>
+        <externalId>false</externalId>
+        <label>GL Account Type</label>
+        <picklist>
+            <controllingField>CampaignType__c</controllingField>
+            <picklistValues>
+                <fullName>Incentives</fullName>
+                <default>false</default>
+                <controllingFieldValues>Incentives</controllingFieldValues>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Misc</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Working</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Rebates</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Sponsorship</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <controllingFieldValues>National POS (Finance Only)</controllingFieldValues>
+                <controllingFieldValues>Other Programming</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GLCode__c</fullName>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <picklist>
+            <controllingField>GLDescription__c</controllingField>
+            <picklistValues>
+                <fullName>15010</fullName>
+                <default>false</default>
+                <controllingFieldValues>Direct Mail</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15020</fullName>
+                <default>false</default>
+                <controllingFieldValues>Trade Digital Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15030</fullName>
+                <default>false</default>
+                <controllingFieldValues>Consumer Magazines Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15040</fullName>
+                <default>false</default>
+                <controllingFieldValues>Consumer Newspaper Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Trade Print Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15050</fullName>
+                <default>false</default>
+                <controllingFieldValues>Radio Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15060</fullName>
+                <default>false</default>
+                <controllingFieldValues>TV Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15070</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cinema Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15080</fullName>
+                <default>false</default>
+                <controllingFieldValues>Heritage Center</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15100</fullName>
+                <default>false</default>
+                <controllingFieldValues>PR Events</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15110</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sponsorship Fees</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15115</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sponsorship Activation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15130</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15140</fullName>
+                <default>false</default>
+                <controllingFieldValues>Advanced TV Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Digital Display Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Mobile Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Non-Standard Digital Units Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Online Video Paid Advertising</controllingFieldValues>
+                <controllingFieldValues>Search Engine Optimization</controllingFieldValues>
+                <controllingFieldValues>Search Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15150</fullName>
+                <default>false</default>
+                <controllingFieldValues>Out of Home</controllingFieldValues>
+                <controllingFieldValues>Outdoor Paid Advertising</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15160</fullName>
+                <default>false</default>
+                <controllingFieldValues>PR Materials / Other Expenses</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15170</fullName>
+                <default>false</default>
+                <controllingFieldValues>Customer Relations Management</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15180</fullName>
+                <default>false</default>
+                <controllingFieldValues>Consumer Giveaways</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15410</fullName>
+                <default>false</default>
+                <controllingFieldValues>Creative Agency Fees</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15420</fullName>
+                <default>false</default>
+                <controllingFieldValues>Ad Production Costs</controllingFieldValues>
+                <controllingFieldValues>Social Content Creation and Development</controllingFieldValues>
+                <controllingFieldValues>Website Creation and Development</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15430</fullName>
+                <default>false</default>
+                <controllingFieldValues>Consumer Research</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15440</fullName>
+                <default>false</default>
+                <controllingFieldValues>Liscensing and Royalty</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15450</fullName>
+                <default>false</default>
+                <controllingFieldValues>Media Agency Fees</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15470</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise Value Added Packaging (VAP)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15490</fullName>
+                <default>false</default>
+                <controllingFieldValues>Panel Research / Trade Data</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15500</fullName>
+                <default>false</default>
+                <controllingFieldValues>Freight and Storage (National POS Only)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15510</fullName>
+                <default>false</default>
+                <controllingFieldValues>PR Agency Fees</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15800</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise Consumer Promotion</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15810</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise Display Installation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15820</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise POS</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15850</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise Sampling</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15870</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise - Trade Event</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15880</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise Consumer Promotion</controllingFieldValues>
+                <controllingFieldValues>On Premise Menus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15890</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise POS</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15900</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise Sampling</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15910</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise - Trade Event</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15920</fullName>
+                <default>false</default>
+                <controllingFieldValues>Rebates Price Support</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15960</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Trade Incentive</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15970</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Trade Incentive</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GLDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>GL Description</label>
+        <picklist>
+            <controllingField>GLAccountType__c</controllingField>
+            <picklistValues>
+                <fullName>Ad Production Costs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advanced TV Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cinema Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Giveaways</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Magazines Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Newspaper Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Research</fullName>
+                <default>false</default>
+                <controllingFieldValues>Research</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Creative Agency Fees</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Relations Management</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Display Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Freight and Storage (National POS Only)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Heritage Center</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liscensing and Royalty</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media Agency Fees</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Standard Digital Units Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise Consumer Promotion</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise Display Installation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise POS</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise Sampling</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise - Trade Event</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Premise Value Added Packaging (VAP)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Off Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off Trade Incentive</fullName>
+                <default>false</default>
+                <controllingFieldValues>Incentives</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online Video Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise Consumer Promotion</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise Menus</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise POS</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise Sampling</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Premise - Trade Event</fullName>
+                <default>false</default>
+                <controllingFieldValues>On Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Trade Incentive</fullName>
+                <default>false</default>
+                <controllingFieldValues>Incentives</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdoor Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out of Home</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel Research / Trade Data</fullName>
+                <default>false</default>
+                <controllingFieldValues>Research</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PR Agency Fees</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PR Events</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PR Materials / Other Expenses</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rebates Price Support</fullName>
+                <default>false</default>
+                <controllingFieldValues>Rebates</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Search Engine Optimization</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Search Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Content Creation and Development</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsorship Activation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sponsorship</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsorship Fees</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sponsorship</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Digital Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Print Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TV Paid Advertising</fullName>
+                <default>false</default>
+                <controllingFieldValues>Working</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website Creation and Development</fullName>
+                <default>false</default>
+                <controllingFieldValues>Non Working</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IOCode__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>IO Code</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>InitialEndDate__c</fullName>
+        <description>Initial end date of the Campaign.</description>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>InitialStartDate__c</fullName>
+        <description>Initial start date of the Campaign.</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Is_Budget_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Budget Change</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mirrored_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field will be used to tie the brand investment campaign to the mirrored program that is created via code.  This field will be used in order to keep the brand investment campaign and the program in sync.</description>
+        <externalId>false</externalId>
+        <label>Mirrored Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Campaigns (Mirrored Program)</relationshipLabel>
+        <relationshipName>MirroredCampaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NationalAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>National Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.ActivelyManaged__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Campaigns (National Account)</relationshipLabel>
+        <relationshipName>Campaigns1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Objective__c</fullName>
+        <externalId>false</externalId>
+        <label>Objective (JTBDI)</label>
+        <picklist>
+            <controllingField>Strategy__c</controllingField>
+            <picklistValues>
+                <fullName>Bartender training and education</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Successful Innovation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BIG GINGER On-Premise Menus/Features</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Consideration &amp; Trial</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BIG GINGER sampling</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Consideration &amp; Trial</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build 10YO distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit New Consumers</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build big, impactful displays</fullName>
+                <default>false</default>
+                <controllingFieldValues>Make Pinnacle Available</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build Wine and Vodka on-premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Wine And Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Close distribution gaps</fullName>
+                <default>false</default>
+                <controllingFieldValues>Make Pinnacle Available</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Close distribution gaps to Smirnoff</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Pinnacle Original</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Close distribution gaps with Bacardi</fullName>
+                <default>false</default>
+                <controllingFieldValues>Interrupt Bacardi</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Co-display with Casa Sauza family</fullName>
+                <default>false</default>
+                <controllingFieldValues>Win At Retail</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Connect JT in-store and on-premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive 901 Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cross merchandising at retail</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Distribution On Plata</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Devil’s Cut and Flavors on-premise activation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Communicate Authenticity &amp; Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Displays via secondary placement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Acquire Lda Millennials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution of JDK &amp; Sons</fullName>
+                <default>false</default>
+                <controllingFieldValues>Steal Share Of Drinking Occasions</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive display and increase velocity</fullName>
+                <default>false</default>
+                <controllingFieldValues>One More Drink Per Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Steal Spiced Share At Shelf (Calico)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive distribution in focus channels</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise (Basil Hayden)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive distribution of KC variants</fullName>
+                <default>false</default>
+                <controllingFieldValues>Expand Distribution (Off)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive distribution on Devil’s Cut</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers From Outside Beam/Bourbon Category</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive hitchhikers in the marketplace</fullName>
+                <default>false</default>
+                <controllingFieldValues>Communicate Authenticity &amp; Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Maker’s 46 distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive menu &amp; back bar placement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise (Basil Hayden)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive on-premise distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive on-premise distribution (JBW, DC, Flavors)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers From Outside Beam/Bourbon Category</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Sauza Blue distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Sauza Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive shot machines</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Successful Innovation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive trial of new products and categories</fullName>
+                <default>false</default>
+                <controllingFieldValues>Establish Belief In Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive trial on flavors</fullName>
+                <default>false</default>
+                <controllingFieldValues>Win With Flavors</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engage bartenders</fullName>
+                <default>false</default>
+                <controllingFieldValues>Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engage trade and ambassadors</fullName>
+                <default>false</default>
+                <controllingFieldValues>One More Drink Per Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Establish Distiller’s Collection on back bar</fullName>
+                <default>false</default>
+                <controllingFieldValues>Premiumize And Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Execute Jim Beam White Taste Challenge</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers From Outside Beam/Bourbon Category</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Execute local Art of Craft events</fullName>
+                <default>false</default>
+                <controllingFieldValues>Build Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Execute sampling programs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Execute sampling programs (Devil’s Cut &amp; Flavors)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Communicate Authenticity &amp; Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Make 901 Accessible</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand distributionOn- and Off-Premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Build Top Of Mind Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand KC base distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Awareness (Off)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand luxury on-premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit New Consumers</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand On-Premise presence</fullName>
+                <default>false</default>
+                <controllingFieldValues>Build Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family displays in key periods</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Wine And Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gain high-impact Make History displays</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers From Outside Beam/Bourbon Category</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Generate educational tastings and events</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Brand Advocacy</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Get 901 to the floor</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive 901 Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Get seasonal flavors to the floor</fullName>
+                <default>false</default>
+                <controllingFieldValues>Win With Flavors</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grow Distiller’s Collection</fullName>
+                <default>false</default>
+                <controllingFieldValues>Premiumize And Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grow distribution of priority flavors</fullName>
+                <default>false</default>
+                <controllingFieldValues>Win With Flavors</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ice Surge shot occasions</fullName>
+                <default>false</default>
+                <controllingFieldValues>Steal Share Of Drinking Occasions</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increased summer programming</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Consideration &amp; Trial</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increase POS and themed display/shelf support</fullName>
+                <default>false</default>
+                <controllingFieldValues>Build Top Of Mind Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increase presence in luxury on-premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increase velocity</fullName>
+                <default>false</default>
+                <controllingFieldValues>Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Innovation Features &amp; Menus</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Successful Innovation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Introduce new pack for Sauza Sparkling</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Sauza Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Launch 1L for on-premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Make 901 Accessible</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Launch Blueberry Lemonade</fullName>
+                <default>false</default>
+                <controllingFieldValues>Interrupt Bacardi</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Launch innovation - Sauza Cucumber Chili</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Sauza Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Launch new package</fullName>
+                <default>false</default>
+                <controllingFieldValues>Reestablish Sauza Brand</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leverage Barrel program</fullName>
+                <default>false</default>
+                <controllingFieldValues>Premiumize And Trade Up</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leverage Barrel Program/POS to secure display</fullName>
+                <default>false</default>
+                <controllingFieldValues>Expand Distribution (Off)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leverage custom selling tools/Winery Exchange</fullName>
+                <default>false</default>
+                <controllingFieldValues>Establish Belief In Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Merchandising Don’t Hurry</fullName>
+                <default>false</default>
+                <controllingFieldValues>Interrupt Bacardi</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixability &amp; Cocktail focus</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit “Whiskey Women”</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Marketing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Acquire Lda Millennials</controllingFieldValues>
+                <controllingFieldValues>Build Awareness</controllingFieldValues>
+                <controllingFieldValues>Build Top Of Mind Awareness</controllingFieldValues>
+                <controllingFieldValues>Communicate Authenticity &amp; Quality</controllingFieldValues>
+                <controllingFieldValues>Drive 901 Awareness</controllingFieldValues>
+                <controllingFieldValues>Drive Awareness (Off)</controllingFieldValues>
+                <controllingFieldValues>Drive Brand Advocacy</controllingFieldValues>
+                <controllingFieldValues>Drive Consideration &amp; Trial</controllingFieldValues>
+                <controllingFieldValues>Drive Sauza Awareness</controllingFieldValues>
+                <controllingFieldValues>Drive Successful Innovation</controllingFieldValues>
+                <controllingFieldValues>Drive The On-Premise</controllingFieldValues>
+                <controllingFieldValues>Drive The On-Premise (Basil Hayden)</controllingFieldValues>
+                <controllingFieldValues>Establish Belief In Quality</controllingFieldValues>
+                <controllingFieldValues>Expand Distribution (Off)</controllingFieldValues>
+                <controllingFieldValues>Get Millennial Males To Consider Jim Beam Again</controllingFieldValues>
+                <controllingFieldValues>Grow Distribution On Plata</controllingFieldValues>
+                <controllingFieldValues>Grow Pinnacle Original</controllingFieldValues>
+                <controllingFieldValues>Grow Wine And Vodka</controllingFieldValues>
+                <controllingFieldValues>Implement Join The Club</controllingFieldValues>
+                <controllingFieldValues>Increase Awareness And Relevance</controllingFieldValues>
+                <controllingFieldValues>Interrupt Bacardi</controllingFieldValues>
+                <controllingFieldValues>Make 901 Accessible</controllingFieldValues>
+                <controllingFieldValues>Make Pinnacle Available</controllingFieldValues>
+                <controllingFieldValues>One More Drink Per Month</controllingFieldValues>
+                <controllingFieldValues>Premiumize And Trade Up</controllingFieldValues>
+                <controllingFieldValues>Recruit Consumers</controllingFieldValues>
+                <controllingFieldValues>Recruit Consumers From Outside Beam/Bourbon Category</controllingFieldValues>
+                <controllingFieldValues>Recruit New Consumers</controllingFieldValues>
+                <controllingFieldValues>Recruit “Whiskey Women”</controllingFieldValues>
+                <controllingFieldValues>Reestablish Sauza Brand</controllingFieldValues>
+                <controllingFieldValues>Regain/Increase Distribution</controllingFieldValues>
+                <controllingFieldValues>Steal Share Of Drinking Occasions</controllingFieldValues>
+                <controllingFieldValues>Steal Spiced Share At Shelf (Calico)</controllingFieldValues>
+                <controllingFieldValues>Trade Up</controllingFieldValues>
+                <controllingFieldValues>Win At Retail</controllingFieldValues>
+                <controllingFieldValues>Win With Flavors</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On premise menus and specials</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Pinnacle Original</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Own the Old Fashioned via menu programs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pinot Noir/Bare Naked 1.75 Launch</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Wine And Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plata distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Distribution On Plata</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POP/John/Vicky/Simon</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Brand Advocacy</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premiumize off-premise presence</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit Consumers</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promote cocktail development</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Brand Advocacy</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reach out to Whisky Women</fullName>
+                <default>false</default>
+                <controllingFieldValues>Recruit “Whiskey Women”</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruit new women drinkers through mixability</fullName>
+                <default>false</default>
+                <controllingFieldValues>One More Drink Per Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regain/Increase distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Regain/Increase Distribution</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sampling</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive 901 Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sampling (Flavors, Black Barrel)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Successful Innovation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sampling programs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Distribution On Plata</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secure menu placements</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Brand Advocacy</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secure menu placements and features</fullName>
+                <default>false</default>
+                <controllingFieldValues>Increase Awareness And Relevance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sharpen mix by swapping out low velocity SKUs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Establish Belief In Quality</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Showcase “Big, Full Flavor” POS</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Awareness (Off)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strengthen luxury on-premise with Upper Variants</fullName>
+                <default>false</default>
+                <controllingFieldValues>Get Millennial Males To Consider Jim Beam Again</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support bourbon heritage month activation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Get Millennial Males To Consider Jim Beam Again</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support retail partnerships</fullName>
+                <default>false</default>
+                <controllingFieldValues>Grow Wine And Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize Bloodhound (Max) in-market</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise (Basil Hayden)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize Craft Whiskey Specialists</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive The On-Premise</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize mixology inspiration kits</fullName>
+                <default>false</default>
+                <controllingFieldValues>Build Awareness</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize New brand identity</fullName>
+                <default>false</default>
+                <controllingFieldValues>Reestablish Sauza Brand</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize POS</fullName>
+                <default>false</default>
+                <controllingFieldValues>Implement Join The Club</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilize “Most Awarded Bourbon” claim in-store</fullName>
+                <default>false</default>
+                <controllingFieldValues>Drive Awareness (Off)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win bartender and influencer endorsement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Increase Awareness And Relevance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win in premium bars/nightclubs</fullName>
+                <default>false</default>
+                <controllingFieldValues>Make 901 Accessible</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ParentMarketingPlan__c</fullName>
+        <externalId>false</externalId>
+        <label>Master Marketing Plan</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>MarketingPlan__c.MP_Type__c</field>
+                <operation>equals</operation>
+                <value>TERRITORY - FIELD</value>
+            </filterItems>
+            <filterItems>
+                <field>MarketingPlan__c.MP_Type__c</field>
+                <operation>equals</operation>
+                <value>TERRITORY - NATL MKTG</value>
+            </filterItems>
+            <filterItems>
+                <field>MarketingPlan__c.MP_Type__c</field>
+                <operation>equals</operation>
+                <value>TERRITORY - NATL ACCTS</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MarketingPlan__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ParticipatingStates__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is for the National Accounts team only to flag which States their Campaigns cover.</inlineHelpText>
+        <label>Participating States (National Accounts)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Alabama</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alaska</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arizona</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arkansas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Colorado</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Connecticut</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delaware</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Georgia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hawaii</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indiana</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Iowa</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kansas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kentucky</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Louisiana</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maryland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Massachusetts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Michigan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Minnesota</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mississippi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missouri</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Montana</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nebraska</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nevada</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Hampshire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Jersey</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Mexico</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York Metro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York Upstate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>North Carolina</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>North Dakota</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Northern California</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ohio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ohio LP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oklahoma</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oregon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rhode Island</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>South Carolina</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>South Dakota</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Southern California</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tennessee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vermont</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virginia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Washington</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Washington D.C.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>West Virginia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wisconsin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wyoming</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PlannedCampaignSpend_USD_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(PlannedCampaignSpend_USD_Hidden__c), NULL, ROUND(PlannedCampaignSpend_USD_Hidden__c,2))</formula>
+        <label>Campaign Budget (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PlannedCampaignSpend_USD_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Budget USD (Hidden)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PlannedCampaignSpend__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Budget</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ProgramDescription__c</fullName>
+        <description>The description that was entered and maintained on the mirrored program.</description>
+        <externalId>false</externalId>
+        <formula>Mirrored_Program__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The description that was entered and maintained on the mirrored program by the State Manager.</inlineHelpText>
+        <label>Program Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RebateCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Rebate Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_Hidden__c</fullName>
+        <description>Field used for workflow rule that shows different Picklist values based on Marketing Plan.</description>
+        <externalId>false</externalId>
+        <label>Division Hidden</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Activation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brand Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>East Coast Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Eastern Control Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Florida Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Franchise Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Insights</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mexico</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mideast Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Midsouth Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Midwest Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mountain Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Accounts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transportation &amp; Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>West Coast Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Western Control Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>Region inherited from parent Marketing Plan.</description>
+        <externalId>false</externalId>
+        <formula>text (ParentMarketingPlan__r.Region__c)</formula>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Priority__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Focus Calendar Priority</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Program__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Focus Calendar Local Priority, Focus Calendar National Priority</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>BI Child Campaigns</relationshipLabel>
+        <relationshipName>BICampaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RequestStatus__c</fullName>
+        <description>Field used to view the current status of the IO generation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field used to view the current status of the IO generation.</inlineHelpText>
+        <label>Request Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IO Not Requested</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Created</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Request_Status_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>IO Status Message</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SAP_Company_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentMarketingPlan__r.SAP_Company_Code__c</formula>
+        <label>SAP Company Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_Controlling_Area__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentMarketingPlan__r.SAP_Controlling_Area__c</formula>
+        <label>SAP Controlling Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_Cost_Center__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentMarketingPlan__r.SAP_Cost_Center__c</formula>
+        <label>SAP Cost Center</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Strategy(JTBD)</label>
+        <picklist>
+            <controllingField>CampaignBrand__c</controllingField>
+            <picklistValues>
+                <fullName>Acquire Lda Millennials</fullName>
+                <default>false</default>
+                <controllingFieldValues>DeKuyper</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build Awareness</fullName>
+                <default>false</default>
+                <controllingFieldValues>Basil Hayden</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build Top Of Mind Awareness</fullName>
+                <default>false</default>
+                <controllingFieldValues>Irish Whiskeys</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communicate Authenticity &amp; Quality</fullName>
+                <default>false</default>
+                <controllingFieldValues>Jim Beam Devils Cut</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive 901 Awareness</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sauza 901</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Awareness (Off)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Knob Creek</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Brand Advocacy</fullName>
+                <default>false</default>
+                <controllingFieldValues>DeKuyper</controllingFieldValues>
+                <controllingFieldValues>Laphroaig</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Consideration &amp; Trial</fullName>
+                <default>false</default>
+                <controllingFieldValues>Irish Whiskeys</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Sauza Awareness</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sauza</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive Successful Innovation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Hornitos</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive The On-Premise</fullName>
+                <default>false</default>
+                <controllingFieldValues>Knob Creek</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drive The On-Premise (Basil Hayden)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Basil Hayden</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Establish Belief In Quality</fullName>
+                <default>false</default>
+                <controllingFieldValues>Skinny Girl</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand Distribution (Off)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Knob Creek</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Get Millennial Males To Consider Jim Beam Again</fullName>
+                <default>false</default>
+                <controllingFieldValues>Jim Beam Devils Cut</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grow Distribution On Plata</fullName>
+                <default>false</default>
+                <controllingFieldValues>Hornitos</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grow Pinnacle Original</fullName>
+                <default>false</default>
+                <controllingFieldValues>Pinnacle Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grow Wine And Vodka</fullName>
+                <default>false</default>
+                <controllingFieldValues>Skinny Girl</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implement Join The Club</fullName>
+                <default>false</default>
+                <controllingFieldValues>Canadian Club</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increase Awareness And Relevance</fullName>
+                <default>false</default>
+                <controllingFieldValues>Hornitos</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interrupt Bacardi</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cruzan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Make 901 Accessible</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sauza 901</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Make Pinnacle Available</fullName>
+                <default>false</default>
+                <controllingFieldValues>Pinnacle Vodka</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>One More Drink Per Month</fullName>
+                <default>false</default>
+                <controllingFieldValues>Makers Mark</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premiumize And Trade Up</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cruzan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruit Consumers</fullName>
+                <default>false</default>
+                <controllingFieldValues>Courvoisier</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruit Consumers From Outside Beam/Bourbon Category</fullName>
+                <default>false</default>
+                <controllingFieldValues>Jim Beam Devils Cut</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruit New Consumers</fullName>
+                <default>false</default>
+                <controllingFieldValues>Laphroaig</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruit “Whiskey Women”</fullName>
+                <default>false</default>
+                <controllingFieldValues>Makers Mark</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reestablish Sauza Brand</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sauza</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regain/Increase Distribution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Canadian Club</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Steal Share Of Drinking Occasions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Steal Spiced Share At Shelf (Calico)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Calico Jack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Up</fullName>
+                <default>false</default>
+                <controllingFieldValues>Makers Mark</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win At Retail</fullName>
+                <default>false</default>
+                <controllingFieldValues>Sauza</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win With Flavors</fullName>
+                <default>false</default>
+                <controllingFieldValues>Pinnacle Vodka</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <formula>ParentMarketingPlan__r.Territory__r.Name</formula>
+        <label>Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UnforecastedCampaignBudget__c</fullName>
+        <description>Campaign Budget - Forecasted Campaign Budget.</description>
+        <externalId>false</externalId>
+        <formula>PlannedCampaignSpend__c  - ForecastedCampaignSpend__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Campaign Budget - Forecasted Campaign Budget.</inlineHelpText>
+        <label>Unforecasted Campaign Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <description>per discussion with Mia, John, Jeff, Jody, Neil on 1/29 we are hiding this value for now.  We will re-visit the creation of a lookup or picklist for preferred vendors.</description>
+        <externalId>false</externalId>
+        <label>Vendor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>text (ParentMarketingPlan__r.Year__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Campaign</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllCampaigns2015</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <columns>RequestStatus__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Year__c</field>
+            <operation>equals</operation>
+            <value>2015</value>
+        </filters>
+        <label>All Campaigns 2015</label>
+    </listViews>
+    <listViews>
+        <fullName>AllCampaigns2016</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>All Campaigns 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IOs_Request_Status_is_IO_Pending</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <columns>RequestStatus__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RequestStatus__c</field>
+            <operation>equals</operation>
+            <value>IO Pending</value>
+        </filters>
+        <label>All IOs Request Status is IO Pending</label>
+        <sharedTo>
+            <role>Application_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyCampaigns2015</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Year__c</field>
+            <operation>equals</operation>
+            <value>2015</value>
+        </filters>
+        <label>My Campaigns 2015</label>
+    </listViews>
+    <listViews>
+        <fullName>MyCampaigns2016</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>My Campaigns 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>National_Accounts_Off_Premise_Campaigns</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>InitialStartDate__c</columns>
+        <columns>InitialEndDate__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Territory__c</field>
+            <operation>equals</operation>
+            <value>NA Off-Premise</value>
+        </filters>
+        <label>National Accounts Off-Premise Campaigns</label>
+    </listViews>
+    <listViews>
+        <fullName>National_Marketing_Cam</fullName>
+        <columns>NAME</columns>
+        <columns>ParentMarketingPlan__c</columns>
+        <columns>Brand_Quality__c</columns>
+        <columns>PlannedCampaignSpend__c</columns>
+        <columns>CampaignBalance__c</columns>
+        <columns>CommittedCampaignSpend__c</columns>
+        <columns>ActualCampaignSpend__c</columns>
+        <columns>InitialStartDate__c</columns>
+        <columns>InitialEndDate__c</columns>
+        <columns>IOCode__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Territory__c</field>
+            <operation>equals</operation>
+            <value>National Marketing</value>
+        </filters>
+        <label>National Marketing Campaigns 2015</label>
+    </listViews>
+    <nameField>
+        <label>Campaign Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Campaigns</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Initial_Campaign_Creation</fullName>
+        <active>true</active>
+        <description>Used for Creation of a Campaign</description>
+        <label>Initial Campaign Creation</label>
+        <picklistValues>
+            <picklist>CampaignBrand__c</picklist>
+            <values>
+                <fullName>Alberta Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alberta Pure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alberta Rye</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alberta Springs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ardmore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auchentoshan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banff Ice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basil Hayden</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bowmore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calico Jack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canadian Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cien Anos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cien Anos RTD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooleys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courvoisier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruzan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DeKuyper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Effen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>El Tesoro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fundador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glen Garioch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glengarioch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hacienda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hibiki</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hornitos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Irish Whiskeys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jim Beam Devils Cut</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jim Beam Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jim Beam Flavors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jim Beam Ghost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jim Beam Red Stag</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kamora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kessler Blend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knob Creek</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laphroaig</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Larios</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Makers Mark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>McClellands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mcclelland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midori</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multibrand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pinnacle Vodka</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plum Dew</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RTD Jim Beam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sauza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sauza 901</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sauza Extra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sauza XA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skinny Girl</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Batch Bourbon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suntory Mixables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suntory Whiskey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teachers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terry Centario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Olds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tres Gen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Windsor Canadian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yamasaki</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CampaignStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CampaignType__c</picklist>
+            <values>
+                <fullName>Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National POS%C2%A0%28Finance Only%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GLAccountType__c</picklist>
+            <values>
+                <fullName>Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GLCode__c</picklist>
+            <values>
+                <fullName>15010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15060</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15070</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15080</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15110</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15115</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15130</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15140</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15150</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15160</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15170</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15180</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15410</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15420</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15430</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15440</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15450</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15470</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15490</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15500</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15510</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15800</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15810</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15820</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15850</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15870</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15880</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15890</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15900</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15910</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15920</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15960</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15970</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GLDescription__c</picklist>
+            <values>
+                <fullName>Ad Production Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advanced TV Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cinema Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Giveaways</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Magazines Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Newspaper Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Creative Agency Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Relations Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Display Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freight and Storage %28National POS Only%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Heritage Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liscensing and Royalty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media Agency Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Standard Digital Units Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise - Trade Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise Consumer Promotion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise Display Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise Sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Premise Value Added Packaging %28VAP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise - Trade Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise Consumer Promotion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise Menus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Premise Sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Video Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdoor Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR Agency Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR Materials %2F Other Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Panel Research %2F Trade Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebates Price Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Search Engine Optimization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Search Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Content Creation and Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship Activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TV Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Digital Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Print Paid Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website Creation and Development</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Objective__c</picklist>
+            <values>
+                <fullName>BIG GINGER On-Premise Menus%2FFeatures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BIG GINGER sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bartender training and education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Build 10YO distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Build Wine and Vodka on-premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Build big%2C impactful displays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Close distribution gaps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Close distribution gaps to Smirnoff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Close distribution gaps with Bacardi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-display with Casa Sauza family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connect JT in-store and on-premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross merchandising at retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Devil%E2%80%99s Cut and Flavors on-premise activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Displays via secondary placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution of JDK %26 Sons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Maker%E2%80%99s 46 distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Sauza Blue distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive display and increase velocity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive distribution in focus channels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive distribution of KC variants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive distribution on Devil%E2%80%99s Cut</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive hitchhikers in the marketplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive menu %26 back bar placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive on-premise distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive on-premise distribution %28JBW%2C DC%2C Flavors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive shot machines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive trial of new products and categories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive trial on flavors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engage bartenders</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engage trade and ambassadors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Establish Distiller%E2%80%99s Collection on back bar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute Jim Beam White Taste Challenge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute local Art of Craft events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute sampling programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute sampling programs %28Devil%E2%80%99s Cut %26 Flavors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand KC base distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand On-Premise presence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand distributionOn- and Off-Premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand luxury on-premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family displays in key periods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gain high-impact Make History displays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generate educational tastings and events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Get 901 to the floor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Get seasonal flavors to the floor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grow Distiller%E2%80%99s Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grow distribution of priority flavors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ice Surge shot occasions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase POS and themed display%2Fshelf support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase presence in luxury on-premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase velocity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increased summer programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Innovation Features %26 Menus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduce new pack for Sauza Sparkling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Launch 1L for on-premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Launch Blueberry Lemonade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Launch innovation - Sauza Cucumber Chili</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Launch new package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leverage Barrel Program%2FPOS to secure display</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leverage Barrel program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leverage custom selling tools%2FWinery Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merchandising Don%E2%80%99t Hurry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixability %26 Cocktail focus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On premise menus and specials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Own the Old Fashioned via menu programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POP%2FJohn%2FVicky%2FSimon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pinot Noir%2FBare Naked 1%2E75 Launch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plata distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premiumize off-premise presence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promote cocktail development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reach out to Whisky Women</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruit new women drinkers through mixability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regain%2FIncrease distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sampling %28Flavors%2C Black Barrel%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sampling programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secure menu placements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secure menu placements and features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sharpen mix by swapping out low velocity SKUs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Showcase %E2%80%9CBig%2C Full Flavor%E2%80%9D POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strengthen luxury on-premise with Upper Variants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support bourbon heritage month activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support retail partnerships</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize %E2%80%9CMost Awarded Bourbon%E2%80%9D claim in-store</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize Bloodhound %28Max%29 in-market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize Craft Whiskey Specialists</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize New brand identity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilize mixology inspiration kits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win bartender and influencer endorsement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win in premium bars%2Fnightclubs</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ParticipatingStates__c</picklist>
+            <values>
+                <fullName>Alabama</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alaska</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arizona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arkansas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Colorado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connecticut</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delaware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Georgia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hawaii</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indiana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Iowa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kansas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kentucky</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Louisiana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Massachusetts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michigan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mississippi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missouri</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Montana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nebraska</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nevada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Hampshire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Jersey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York Metro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York Upstate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Carolina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Dakota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio LP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oklahoma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oregon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rhode Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Carolina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Dakota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vermont</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virginia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington D%2EC%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>West Virginia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wisconsin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wyoming</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_Hidden__c</picklist>
+            <values>
+                <fullName>Activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brand Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>East Coast Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eastern Control Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Franchise Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Insights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mideast Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midsouth Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mountain Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation %26 Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>West Coast Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Western Control Division</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RequestStatus__c</picklist>
+            <values>
+                <fullName>IO Created</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Not Requested</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>IO Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategy__c</picklist>
+            <values>
+                <fullName>Acquire Lda Millennials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Build Awareness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Build Top Of Mind Awareness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communicate Authenticity %26 Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive 901 Awareness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Awareness %28Off%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Brand Advocacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Consideration %26 Trial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Sauza Awareness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive Successful Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive The On-Premise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drive The On-Premise %28Basil Hayden%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Establish Belief In Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expand Distribution %28Off%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Get Millennial Males To Consider Jim Beam Again</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grow Distribution On Plata</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grow Pinnacle Original</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grow Wine And Vodka</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implement Join The Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase Awareness And Relevance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interrupt Bacardi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 901 Accessible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Pinnacle Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One More Drink Per Month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premiumize And Trade Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruit %E2%80%9CWhiskey Women%E2%80%9D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruit Consumers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruit Consumers From Outside Beam%2FBourbon Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruit New Consumers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reestablish Sauza Brand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regain%2FIncrease Distribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steal Share Of Drinking Occasions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steal Spiced Share At Shelf %28Calico%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win At Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win With Flavors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>ParentMarketingPlan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Brand_Quality__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PlannedCampaignSpend__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CampaignBalance__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CommittedCampaignSpend__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ActualCampaignSpend__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InitialStartDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InitialEndDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IOCode__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ParentMarketingPlan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PlannedCampaignSpend__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CampaignBalance__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ParentMarketingPlan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PlannedCampaignSpend__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CampaignBalance__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Year__c</searchFilterFields>
+        <searchFilterFields>Country__c</searchFilterFields>
+        <searchFilterFields>Brand__c</searchFilterFields>
+        <searchFilterFields>Brand_Quality__c</searchFilterFields>
+        <searchFilterFields>Region__c</searchFilterFields>
+        <searchFilterFields>Division__c</searchFilterFields>
+        <searchFilterFields>Territory__c</searchFilterFields>
+        <searchFilterFields>CampaignType__c</searchFilterFields>
+        <searchFilterFields>GLAccountType__c</searchFilterFields>
+        <searchFilterFields>NationalAccount__c</searchFilterFields>
+        <searchResultsAdditionalFields>ParentMarketingPlan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Brand_Quality__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PlannedCampaignSpend__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CampaignBalance__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CommittedCampaignSpend__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ActualCampaignSpend__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>InitialStartDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>InitialEndDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IOCode__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CampaignAttributesRequired</fullName>
+        <active>true</active>
+        <description>This validation rule is required to enforce the picklist field requiredness on the custom VF page(grid).</description>
+        <errorConditionFormula>ISBLANK(Name) ||
+ISBLANK(TEXT(CampaignType__c)) || 
+ISBLANK(TEXT(GLAccountType__c)) || 
+ISBLANK(TEXT(GLDescription__c)) || 
+ISBLANK(TEXT(GLCode__c))</errorConditionFormula>
+        <errorMessage>Campaign Name. Campaign Type. GL Account Type. GL Description. GL Code must be populated.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CampaignBudgetCannotbeLessThanZero</fullName>
+        <active>true</active>
+        <description>Campaign Budget cannot be less than zero dollars.</description>
+        <errorConditionFormula>PlannedCampaignSpend__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>PlannedCampaignSpend__c</errorDisplayField>
+        <errorMessage>Campaign Budget cannot be less than zero dollars. Please update the Campaign Budget field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CampaignCreatedInPriorYear</fullName>
+        <active>false</active>
+        <description>Campaigns cannot be created if the Master Marketing Plan is associated with a previous Year</description>
+        <errorConditionFormula>AND( 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator with Bulk Hard Delete&quot;, 
+VALUE(( Year__c )) &lt; YEAR( TODAY() ))</errorConditionFormula>
+        <errorMessage>Campaigns cannot be created if the Master Marketing Plan is associated with a previous Year</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CampaignCurrencyMustEqualMP</fullName>
+        <active>false</active>
+        <description>Campaign Currency must equal Marketing Plan Currency.</description>
+        <errorConditionFormula>text(CurrencyIsoCode)  &lt;&gt;  text(ParentMarketingPlan__r.CurrencyIsoCode)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Campaign Currency does not equal Marketing Plan Currency.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Campaign_BQ_match_MP_B</fullName>
+        <active>true</active>
+        <description>Campaign Brand Quality must be consistent with the Brand associated with the Parent Marketing Plan.</description>
+        <errorConditionFormula>Brand_Quality__r.Brand__c &lt;&gt;  ParentMarketingPlan__r.Brand__c</errorConditionFormula>
+        <errorDisplayField>Brand_Quality__c</errorDisplayField>
+        <errorMessage>Brand Quality is not consistent with the Brand associated with this Marketing Plan. Please enter an appropriate Brand Quality value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Campaign_Date_Validation</fullName>
+        <active>true</active>
+        <description>Campaign Start Date must be less than End Date.</description>
+        <errorConditionFormula>InitialStartDate__c   &gt;   InitialEndDate__c</errorConditionFormula>
+        <errorDisplayField>InitialStartDate__c</errorDisplayField>
+        <errorMessage>Start Date must be prior or equal to End Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CampaignsOnlyCreatedwithMPCampaignRT</fullName>
+        <active>true</active>
+        <description>Campaigns can only be created if the Master Marketing Plan has a record type containing &apos;Campaigns Allowed&apos;.</description>
+        <errorConditionFormula>AND(ParentMarketingPlan__r.RecordType.Name &lt;&gt; &quot;Campaigns Allowed - Not Editable&quot;, ParentMarketingPlan__r.RecordType.Name  &lt;&gt; &quot;Campaigns Allowed - Editable&quot;)</errorConditionFormula>
+        <errorMessage>Campaigns can only be created if the Master Marketing Plan record type allows for Campaigns. Please select another Marketing Plan.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Comments_Required_for_Budget_Update</fullName>
+        <active>true</active>
+        <description>If the Campaign Budget is changed, the user must enter a comment as to why.</description>
+        <errorConditionFormula>and(ischanged( PlannedCampaignSpend__c ),isblank( Comments__c ))</errorConditionFormula>
+        <errorMessage>A Comment is required when changing a Campaign Budget value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>End_Date_Year_Match_Parent</fullName>
+        <active>true</active>
+        <description>End Date Year must match the Parent Marketing Plan.</description>
+        <errorConditionFormula>text(ParentMarketingPlan__r.Year__c )  &lt;&gt;  text(YEAR( InitialEndDate__c ))</errorConditionFormula>
+        <errorDisplayField>InitialEndDate__c</errorDisplayField>
+        <errorMessage>End Date Year must match the Parent Marketing Plan.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Forecasted_Amount_must_be_LE_Budget</fullName>
+        <active>false</active>
+        <errorConditionFormula>ForecastedCampaignSpend__c &gt;  PlannedCampaignSpend__c</errorConditionFormula>
+        <errorMessage>You cannot Forecast more than the Campaign Budget.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IOCodeCannotBeCreatedinPriorYearPlan</fullName>
+        <active>true</active>
+        <description>IO Codes cannot be created for a Campaigns if the Master Marketing Plan is associated with a previous Year</description>
+        <errorConditionFormula>AND( 
+ISCHANGED( IOCode__c), 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator with Bulk Hard Delete&quot;, 
+VALUE(( Year__c )) &lt; YEAR( TODAY() ))</errorConditionFormula>
+        <errorMessage>IO Codes cannot be created for a Campaigns if the Master Marketing Plan is associated with a previous Year</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_Date_Year_Match_Parent</fullName>
+        <active>true</active>
+        <description>Start Date Year must match the Parent Marketing Plan.</description>
+        <errorConditionFormula>text(ParentMarketingPlan__r.Year__c )  &lt;&gt;  text(YEAR( InitialStartDate__c ))</errorConditionFormula>
+        <errorDisplayField>InitialStartDate__c</errorDisplayField>
+        <errorMessage>Start Date Year must match the Parent Marketing Plan.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_SAP_IO</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create SAP IO</masterLabel>
+        <openType>sidebar</openType>
+        <page>BI_GenerateIOButton</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

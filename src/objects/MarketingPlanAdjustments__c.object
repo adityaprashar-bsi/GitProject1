@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Marketing Plan Budget Transfers form.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Dollar amount of the request.</inlineHelpText>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Brand_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>TransferringMarketingPlan__r.Brand__r.Name</formula>
+        <label>Brand From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brand_Manager_From__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand Manager From</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Marketing_Plan_Adjustments_and_Transfer1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Manager_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand Manager To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Marketing_Plan_Adjustments_and_Transfers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Brand_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>ReceivingMarketingPlan__r.Brand__r.Name</formula>
+        <label>Brand To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(TransferringMarketingPlan__r.Country__c)</formula>
+        <label>Country From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReasonforRequest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Brief description of the reason for the request.</inlineHelpText>
+        <label>Reason for Request</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ReceivingMarketingPlan__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Marketing Plan receiving additional funds.</inlineHelpText>
+        <label>Receiving Marketing Plan</label>
+        <referenceTo>MarketingPlan__c</referenceTo>
+        <relationshipLabel>Marketing Plan Transfers (Receiving Marketing Plan)</relationshipLabel>
+        <relationshipName>Marketing_Plan_Adjustments2</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Receiving_Marketing_Plan_Owner_Email__c</fullName>
+        <description>This email will be triggered to the Marketing Plan Owner receiving transferred funds, in the event of an approval or rejection of funds transfer.</description>
+        <externalId>false</externalId>
+        <label>Receiving Marketing Plan Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(TransferringMarketingPlan__r.Region__c)</formula>
+        <label>Region From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( ReceivingMarketingPlan__r.Region__c )</formula>
+        <label>Region To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequestStatusDescription__c</fullName>
+        <description>Field used to populate reason for failed processing of adjustment.</description>
+        <externalId>false</externalId>
+        <label>Request Status Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Request_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TransferringMPYearHidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(TransferringMarketingPlan__r.Year__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Transferring MP Year Hidden</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TransferringMarketingPlan__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Marketing Plan transferring additional funds.</inlineHelpText>
+        <label>Transferring Marketing Plan</label>
+        <referenceTo>MarketingPlan__c</referenceTo>
+        <relationshipLabel>Marketing Plan Transfers (Transferring Marketing Plan)</relationshipLabel>
+        <relationshipName>Marketing_Plan_Transfer</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Within_Same_Brand__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ReceivingMarketingPlan__r.Brand__r.Name = TransferringMarketingPlan__r.Brand__r.Name, &quot;Yes&quot;,&quot;No&quot;)</formula>
+        <label>Within Same Brand?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Within_Same_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( text(TransferringMarketingPlan__r.Region__c) =  text(ReceivingMarketingPlan__r.Region__c),&quot;Yes&quot;,&quot;No&quot;)</formula>
+        <label>Within Same Region?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Marketing Plan Transfer</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>TransferringMarketingPlan__c</columns>
+        <columns>ReceivingMarketingPlan__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MPADJ-{000000}</displayFormat>
+        <label>Transfer Record ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Marketing Plan Transfers</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Creation</fullName>
+        <active>true</active>
+        <description>Record Type used for initial creation</description>
+        <label>Creation</label>
+        <picklistValues>
+            <picklist>Request_Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>TransferringMarketingPlan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ReceivingMarketingPlan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Request_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ReceivingMarketingPlan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TransferringMarketingPlan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Request_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ReceivingMarketingPlan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TransferringMarketingPlan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Amount__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Request_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>TransferringMarketingPlan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ReceivingMarketingPlan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CannotSubmitRequestForSameMarketingPlan</fullName>
+        <active>true</active>
+        <description>Cannot submit request if Transferring and Receiving Marketing Plans are the same.</description>
+        <errorConditionFormula>TransferringMarketingPlan__c  =  ReceivingMarketingPlan__c</errorConditionFormula>
+        <errorMessage>Transferring and Receiving Marketing Plans are the same. Please change one of the fields and submit again.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Transfer_Across_Country_Budgets</fullName>
+        <active>true</active>
+        <description>You cannot request a transfer between budgets that exist within separate countries.</description>
+        <errorConditionFormula>text(TransferringMarketingPlan__r.Country__c) &lt;&gt;  text(ReceivingMarketingPlan__r.Country__c)</errorConditionFormula>
+        <errorMessage>You cannot request a transfer between Marketing Plan budgets that exist within separate countries.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MarketingPlanCurrenciesMatch</fullName>
+        <active>false</active>
+        <description>Transferring and Receiving Marketing Plan currencies must match.</description>
+        <errorConditionFormula>text(TransferringMarketingPlan__r.CurrencyIsoCode) &lt;&gt;  text(ReceivingMarketingPlan__r.CurrencyIsoCode)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Transferring and Receiving Marketing Plan currencies must match.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RequestedCurrencyMatchTransferringMP</fullName>
+        <active>false</active>
+        <description>Transferring Marketing Plan currency must match the currency on the request.</description>
+        <errorConditionFormula>text( CurrencyIsoCode)  &lt;&gt;  text(TransferringMarketingPlan__r.CurrencyIsoCode)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Transferring Marketing Plan currency must match the currency on the request.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TransferMustBeGreaterThanZero</fullName>
+        <active>true</active>
+        <description>Transfer amount must be greater than zero.</description>
+        <errorConditionFormula>Amount__c  &lt;= 0</errorConditionFormula>
+        <errorDisplayField>Amount__c</errorDisplayField>
+        <errorMessage>Transfer amount must be greater than zero.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TransferringMPYearIsNotCurrent</fullName>
+        <active>true</active>
+        <description>The Year of Transferring Marketing Plan or Receiving Marketing Plan is not the current year.</description>
+        <errorConditionFormula>AND( 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator with Bulk Hard Delete&quot;, 
+VALUE((text(TransferringMarketingPlan__r.Year__c) )) &lt; YEAR( TODAY() ))</errorConditionFormula>
+        <errorMessage>Year of Transferring Marketing Plan is not the current year</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TransferringMPYearequalsReceivingMPYear</fullName>
+        <active>true</active>
+        <errorConditionFormula>text(TransferringMarketingPlan__r.Year__c)  &lt;&gt;  text(ReceivingMarketingPlan__r.Year__c)</errorConditionFormula>
+        <errorMessage>Year of Transferring Marketing Plan does not equal Year of Receiving Marketing Plan.</errorMessage>
+    </validationRules>
+</CustomObject>

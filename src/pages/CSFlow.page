@@ -1,0 +1,198 @@
+<apex:page id="CSFlow" Controller="CSFlowController"  showHeader="false">
+<html>
+   <head>
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+   </head>
+
+
+
+    <script>
+      var FlowModule = (function() {
+         var attachmentNum = 1;
+         var isFileAttached = null;
+         var numOfAttachments;
+         var attachmentRequired;
+         var recordTypeValues = ['Orders', 'Quality Claim'];
+         var orderClaimTypeValues = ['Damage Claim', 'Overage Claim', 'Mis-Shipment Claim'];
+         var selectedRecordType = '{!myFlow.FormTypeValueMaster}';
+         var selectedOrderClaimType = '{!myFlow.OrderClaimTypeValueMaster}';
+         var caseID = '{!myFlow.RecordIDMaster}';
+
+
+         $(document).ready(function() {
+            var attachmentValidation = function(value, choices) {
+               for (var i = 0; i < choices.length; i++) {
+                  if (choices[i] == value) {
+                     attachmentRequired = true;
+                  }
+               }
+            }
+
+            attachmentValidation(selectedOrderClaimType, orderClaimTypeValues);
+            attachmentValidation(selectedRecordType, recordTypeValues);
+            console.log('is attachment required ' + attachmentRequired);
+
+            //console.log('User profile: ' +'{!UserProfile}');   // prints out the current user profile(community user)
+            var fileInputs = []; // array for holding each file input
+            var children = $('.uploadForm__attachmentsArea--uploadSection').children('input'); // holds all of the file input elements
+            for (var j = 0; j < children.length; j++) {
+               fileInputs.push(children[j]);
+               $(fileInputs[j]).addClass('file' + j); // adds a class to each file to distinguish between files(ids are already assigned by salesforce)
+            }
+            numOfAttachments = children.length; // holds the number of files that can be attached at once
+            checkID();
+
+         });
+
+         $(document).on('click', '.FlowFinishBtn', function(event) {
+            event.preventDefault();
+            save(); // saves any files attached in case they forget to upload them
+            window.top.location.pathname = '/customer/s/case/' + caseID;
+            // gets the size and name of the file being attached
+         }).on('change', '.uploadForm__attachmentsArea', function(event) {
+            var selectedFileClass = event.target.className;
+            var selectedFileValue = getElementsByClassName(selectedFileClass)[0].files[0].name;
+            var fileSize = getElementsByClassName(selectedFileClass)[0].files[0].size / 1000;
+            for (var k = 0; k < numOfAttachments; k++) {
+               if ($('.file' + k).val() == '') {
+                  isFileAttached = false;
+                  console.log('value is ' + $('.file' + k).val());
+               }
+            }
+
+
+            if (fileSize < 25000) {
+               $('.uploadForm__errorMessage').html('').hide();
+               isFileAttached = true;
+            } // ends if statement
+            else {
+               $('.uploadForm__errorMessage').html('{!$Label.AttachmentErrorMessage1}').show();
+               $('.' + selectedFileClass).val('');
+            }
+
+            // checks the type selected on next button click and stores value in formtype variable
+         }).on('click', '.FlowNextBtn', function(event) {
+
+            // validation for upload area
+            if (($('.uploadForm').is(':visible') && {!recordCreated} && isFileAttached) || ($('.uploadForm').is(':visible') 
+            && attachmentRequired == 'null' && {!recordCreated} == false && !isFileAttached)) {
+               $('.uploadForm__errorMessage').html('').hide();
+            } 
+            else if (($('.uploadForm').is(':visible') && {!recordCreated} == false && attachmentRequired) || ($('.uploadForm').is(':visible') && isFileAttached)) {
+               event.preventDefault();
+               $('.uploadForm__errorMessage').html('{!$Label.AttachmentErrorMessage2}').show();
+            }
+
+         });
+
+         var saveFile = function() {
+            isFileAttached = true;
+            save(); // calling method from controller
+            $('.file0').show();
+         };
+
+         // function for add more button to show more file upload buttons
+         var showFile = function() {
+            $('.file' + attachmentNum).show();
+            attachmentNum++;
+         };
+
+         // checks to see if the case has been created
+         var checkID = function() {
+            if (caseID) {
+               console.log('id available');
+               $('.uploadForm').show();
+               $('.file0').show();
+            }
+         };
+
+         return {
+            saveFile: saveFile,
+            showFile: showFile
+         };
+      })();
+    </script>
+
+    <style>
+      .uploadForm__buttonGroup--state-save,.uploadForm__buttonGroup--state-add {
+         padding-top: 4px;
+         padding-bottom: 4px;
+         margin-bottom: 2%;
+      }
+
+      .uploadForm__buttonGroup {
+         margin-left: 45%;
+      }
+
+      .uploadForm__uploadedFiles{
+         font-size: 12px !important;
+         margin-left:2px;
+      }
+
+      .uploadForm__fileGroupTitle {
+         font-size: 14px;
+         font-weight: bold;
+         text-decoration: underline;
+         margin-top: 3%;
+         margin-left:2px;
+      }
+
+      .uploadForm__errorMessage {
+         display:none;color:red;
+         font-size:14px;
+         margin-left:35%;
+      }
+      .mainTitle {
+         text-align:left;
+      }  
+
+
+    </style>
+
+   <!-- The flow sits in here -->
+   <flow:interview name="Form_Selection_Master_Flow" interview="{!myFlow}">
+      <apex:param name="UserProfileMaster" value="{!UserProfile}" />
+      <apex:param name="SpecialCircumstanceMaster" value="{!MilitaryPriorityCurrentUser}" />
+      <apex:param name="UserLanguageMaster" value="{!currentUserLanguage}" />
+      <apex:param name="AccessGroupMaster" value="{!userAccessGroup}" />
+   </flow:interview>
+   <!-- Area for attachments -->
+   <div class="uploadForm" style="display:none"> 
+      <div class="uploadForm__buttonGroup">
+         <button class="uploadForm__buttonGroup--state-add" value="Add More" onClick="FlowModule.showFile()">{!$Label.FlowButtonAdd}</button>
+         <button class="uploadForm__buttonGroup--state-save" value="Save" onClick="FlowModule.saveFile()">{!$Label.UploadAttachments}</button>
+      </div>
+      <!-- Area for error Messages -->
+      <div class="uploadForm__errorMessage"></div>
+      <!-- Area for individual file attachments -->
+      <apex:form id="attForm" html-class="uploadForm__attachmentsArea" >
+          
+    
+         <div style="text-align: center"></div>
+            <apex:repeat value="{!newAttachments}" var="newAtt">
+               <div class="uploadForm__attachmentsArea--uploadSection">
+                  <apex:inputFile style="display:none;margin-bottom:3px;" value="{!newAtt.body}" fileSize="" filename="{!newAtt.name}" title="{!newAtt.bodylength}" />
+               </div>
+            </apex:repeat>
+            <!-- save function from controller -->
+            <apex:actionFunction name="save" action="{!save}" />
+
+        <!--  <apex:pageBlock title="{!$Label.FilesUploaded}">
+               <apex:pageBlockTable value="{!atts}" var="attachment">
+                  <apex:column headerValue="FileName" value="{!attachment.Name}"/>
+                  <apex:column headerValue="Size" value="{!attachment.bodylength}"/>
+               </apex:pageBlockTable>
+            </apex:pageBlock> -->
+            
+              <apex:pageBlock title="{!$Label.FilesUploaded}">
+               <apex:pageBlockTable value="{!FeedList}" var="fd">
+                  <apex:column headerValue="FileName" value="{!fd}"/>
+                  <apex:column headerValue="Size" value="{!FeedList[fd]}"/>
+               </apex:pageBlockTable>
+            </apex:pageBlock>
+
+          
+      </apex:form>
+   </div>
+</html>
+</apex:page>

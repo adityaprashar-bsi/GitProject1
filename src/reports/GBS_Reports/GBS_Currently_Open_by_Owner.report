@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_21453468</developerName>
+        <masterLabel>GBS Function</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Case$Case_Record_Type__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>HR</sourceValue>
+            </sourceValues>
+            <value>HR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>PTP/AP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTP/AP - PR/PO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>T&amp;E</sourceValue>
+            </sourceValues>
+            <value>PTP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Payroll</sourceValue>
+            </sourceValues>
+            <value>Payroll</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>RTR</sourceValue>
+            </sourceValues>
+            <value>RTR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>GMDM</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Account Change/Extend</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Center Account Create</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Center Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Customer Hierarchy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Customer Maintenance</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - EDW Mapping</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Materials</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Rebates</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Simple Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMDM - Vendor Maintenance</sourceValue>
+            </sourceValues>
+            <value>GMDM</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OTC - Bailment</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Bailment Error</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC Billing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Cancellation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Commissions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Correct Invoice</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Credit Approval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - D2D Xfer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - FI Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Invoice Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Invoice Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Manual Invoice Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - Resend Auto Invoice</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OTC - TPM</sourceValue>
+            </sourceValues>
+            <value>OTC</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Case$Owner</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$Status</field>
+    </columns>
+    <columns>
+        <field>Case$Case_Record_Type__c</field>
+    </columns>
+    <columns>
+        <field>Case$Account</field>
+    </columns>
+    <columns>
+        <field>Case$BSI_Function__c</field>
+    </columns>
+    <columns>
+        <field>Case$Contact</field>
+    </columns>
+    <columns>
+        <field>Case$Submitter__c</field>
+    </columns>
+    <columns>
+        <field>Case$Priority</field>
+    </columns>
+    <columns>
+        <field>Case$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case$ClosedDate</field>
+    </columns>
+    <columns>
+        <field>Case$IsClosed</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case$BSI_Function__c</column>
+            <operator>equals</operator>
+            <value>GBS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$IsClosed</column>
+            <operator>notEqual</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_21453468</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>GBS Currently Open by Owner test</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

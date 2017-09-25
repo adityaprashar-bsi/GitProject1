@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Default</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed - Lost Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Won Opportunity</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Rep Created</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Open - Rep Created</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>Opportunity_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Opportunity_Compact_Layout</fullName>
+        <fields>BrandVariety__c</fields>
+        <fields>SizeDescription__c</fields>
+        <fields>Rank__c</fields>
+        <label>Opportunity Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_External_Id_Aperity__c</fullName>
+        <externalId>true</externalId>
+        <label>Account External Id Aperity</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualBottlesofFirstFulfillment__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Actual Bottles of First Fulfillment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Bottle_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Bottle Size</label>
+        <picklist>
+            <picklistValues>
+                <fullName>50 ML</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100 ML</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>200 ML</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>375 ML</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>750 ML</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 L</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.75 L</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BrandLevelLLDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Level LL Description - DELETE?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BrandLevelLLKeyID__c</fullName>
+        <externalId>true</externalId>
+        <label>Brand Level LL Key ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BrandLevelLLKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Level LL Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BrandVarietyDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Variety Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BrandVariety__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand Variety</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Tags__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Brand Variety</value>
+            </filterItems>
+            <filterItems>
+                <field>Tags__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Tags__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CloseDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ClusterDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Cluster Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClusterKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Cluster Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>DateofFulfillment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipment Date.</inlineHelpText>
+        <label>Date of Fulfillment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ExpectedBottlesofFirstFulfillment__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Expected Bottles of First Fulfillment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Expected_Date_of_Fulfillment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated date of when the account expects to receive the product (if known).</inlineHelpText>
+        <label>Expected Date of Fulfillment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>External_Id_Aperity__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id Aperity</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FocusBrandTypes__c</fullName>
+        <externalId>false</externalId>
+        <label>Focus Brand Types</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pillar Brand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Fulfilled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fulfilled</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <inlineHelpText>When saved, will override name with standardized version with Account Name, Brand Variety, and Bottle Size.</inlineHelpText>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>NextStep</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PartnerAccountId</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Probability</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QuantityTypeDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity Type Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bottles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>QuantityTypeKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity Type Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rank__c</fullName>
+        <externalId>false</externalId>
+        <label>Rank</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ReasonWonorLost__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Won or Lost</label>
+        <picklist>
+            <controllingField>StageName</controllingField>
+            <picklistValues>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Won Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Didn&apos;t Sell Before</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution Deal</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Won Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Space</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not on Cocktail Menu</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Relevant for Customers</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Popular Demand</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Won Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Taste</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Won Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Lost Opportunity</controllingFieldValues>
+                <controllingFieldValues>Closed - Won Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aperity Driven</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason_Detail__c</fullName>
+        <description>This field allows the user to add more detail regarding the reason won or lost.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please indicate more detail regarding the reason won or lost, especially if you selected &quot;Other&quot; as the reason won or lost.</inlineHelpText>
+        <label>Reason Detail</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SimilarTotalAllClusterEQ__c</fullName>
+        <externalId>false</externalId>
+        <label>Similar - Total All Cluster EQ</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SimilarTotalAllClusterPlacements__c</fullName>
+        <externalId>false</externalId>
+        <label>Similar - Total All Cluster Placements</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SimilarTotalPHY__c</fullName>
+        <description>Number of physical case placements for this Brand Variety in similar stores.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of physical case placements for this Brand Variety in similar stores.</inlineHelpText>
+        <label>Similar - Total PHY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SimilarTotalPlacements__c</fullName>
+        <description>Number of total 9L placements for this Brand Variety in similar stores.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of total 9L placements for this Brand Variety in similar stores.</inlineHelpText>
+        <label>Similar - Total Placements</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SizeDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Size Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SizeKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Size Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Size</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Source Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Segmentation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution Cluster</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rep Created</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StageLastModified__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage Last Modified</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Closed - Lost Opportunity</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Won Opportunity</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open - Aperity Provided</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>100</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open - Rep Created</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>100</probability>
+                <won>false</won>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StatusKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Key</label>
+        <picklist>
+            <picklistValues>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StoreAllClusterMO12EQLY__c</fullName>
+        <externalId>false</externalId>
+        <label>Store All Cluster MO 12 EQ LY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StoreAllClusterMO12EQ__c</fullName>
+        <externalId>false</externalId>
+        <label>Store All Cluster MO 12 EQ</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StoreAllClusterMO12PlacementsLY__c</fullName>
+        <externalId>false</externalId>
+        <label>Store All Cluster MO 12 Placements LY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StoreAllClusterMO12Placements__c</fullName>
+        <externalId>false</externalId>
+        <label>Store All Cluster MO 12 Placements</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StoreID__c</fullName>
+        <externalId>true</externalId>
+        <label>Store ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StoreSellsSize__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Store Sells Size</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TotalOpportunityQuantity</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TypeKey__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X12MORADPHYLY__c</fullName>
+        <description>Physical case retail volume for this Account last year (rolling).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Physical case retail volume for this Account last year (rolling).</inlineHelpText>
+        <label>12 MO RAD PHY LY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X12MORADPHYTY__c</fullName>
+        <description>Physical case retail volume for this Account in the last 12 months (rolling).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Physical case retail volume for this Account in the last 12 months (rolling).</inlineHelpText>
+        <label>12 MO RAD PHY TY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllOpenOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Open - Aperity Provided</value>
+        </filters>
+        <label>All Open Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyLostOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Closed - Lost Opportunity</value>
+        </filters>
+        <label>My Lost Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Open - Aperity Provided</value>
+        </filters>
+        <label>My Open Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyWonOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Closed - Won Opportunity</value>
+        </filters>
+        <label>My Won Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>WonOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ReasonWonorLost__c</columns>
+        <columns>ExpectedBottlesofFirstFulfillment__c</columns>
+        <columns>ActualBottlesofFirstFulfillment__c</columns>
+        <columns>DateofFulfillment__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Closed - Won Opportunity</value>
+        </filters>
+        <label>All Won Opportunities</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Aperity_Driven</fullName>
+        <active>true</active>
+        <businessProcess>Default</businessProcess>
+        <description>Distribution opportunities generated by Aperity</description>
+        <label>Aperity Driven</label>
+        <picklistValues>
+            <picklist>Bottle_Size__c</picklist>
+            <values>
+                <fullName>1 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>200 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>375 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>750 ML</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>FocusBrandTypes__c</picklist>
+            <values>
+                <fullName>Pillar Brand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityTypeDescription__c</picklist>
+            <values>
+                <fullName>Bottles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rank__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonWonorLost__c</picklist>
+            <values>
+                <fullName>Aperity Driven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Sell Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Deal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Relevant for Customers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not on Cocktail Menu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Popular Demand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taste</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Account Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Cluster</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StatusKey__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Beam_Driven</fullName>
+        <active>true</active>
+        <businessProcess>Default</businessProcess>
+        <description>Distribution opportunities created by field reps</description>
+        <label>Beam Driven</label>
+        <picklistValues>
+            <picklist>Bottle_Size__c</picklist>
+            <values>
+                <fullName>1 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>200 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>375 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>750 ML</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>FocusBrandTypes__c</picklist>
+            <values>
+                <fullName>Pillar Brand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityTypeDescription__c</picklist>
+            <values>
+                <fullName>Bottles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rank__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonWonorLost__c</picklist>
+            <values>
+                <fullName>Aperity Driven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Sell Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Deal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Relevant for Customers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not on Cocktail Menu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Popular Demand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taste</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Account Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Cluster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rep Created</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StatusKey__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Beam_Driven_Create_Only</fullName>
+        <active>true</active>
+        <businessProcess>Rep Created</businessProcess>
+        <description>Used for creation of rep-created distribution opportunities</description>
+        <label>Beam Driven - Create Only</label>
+        <picklistValues>
+            <picklist>Bottle_Size__c</picklist>
+            <values>
+                <fullName>1 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75 L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>200 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>375 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50 ML</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>750 ML</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>FocusBrandTypes__c</picklist>
+            <values>
+                <fullName>Pillar Brand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityTypeDescription__c</picklist>
+            <values>
+                <fullName>Bottles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rank__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonWonorLost__c</picklist>
+            <values>
+                <fullName>Aperity Driven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Sell Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Deal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Relevant for Customers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not on Cocktail Menu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Popular Demand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taste</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Account Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Cluster</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StatusKey__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>OPPORTUNITY.NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.SITE</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>OpportunityNameEditing</fullName>
+        <active>true</active>
+        <description>Opportunity Names can only be edited by the System Admin Profile. This will ensure that opportunity names are only updated through the integration and not by any Sales 360 users without a System Admin Profile.</description>
+        <errorConditionFormula>ISCHANGED(Name)&amp;&amp; 
+NOT(OR(
+$Profile.Name = &quot;System Administrator&quot;,
+$Profile.Name = &quot;System Administrator with Bulk Hard Delete&quot;))</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Opportunity Name cannot be edited as Opportunity Name is controlled by Aperity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Reason_Detail_if_Other_Selected</fullName>
+        <active>true</active>
+        <description>Require a value within the &quot;Reason Detail&quot; field if &quot;Other&quot; is selected as the &quot;Reason Won or Lost&quot;</description>
+        <errorConditionFormula>IF( ISPICKVAL(ReasonWonorLost__c, &apos;Other&apos;), If( ISBLANK( Reason_Detail__c ), true, false), false)</errorConditionFormula>
+        <errorMessage>Please explain why the opportunity was won or lost in the Reason Detail field.</errorMessage>
+    </validationRules>
+</CustomObject>

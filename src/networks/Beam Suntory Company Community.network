@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>Beam Suntory</loginFooterText>
+        <loginLogo>Communities_Shared_Document_Folder/BeamSuntoryLogoCommunity_png.png</loginLogo>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <caseCommentEmailTemplate>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</caseCommentEmailTemplate>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>customer.service@beamsuntory.com</emailSenderAddress>
+    <emailSenderName>Beam Suntory Company Community</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <networkMemberGroups>
+        <permissionSet>Company_Community_for_Force_com</permissionSet>
+        <profile>Admin</profile>
+        <profile>GBS Management</profile>
+        <profile>Company Employee</profile>
+        <profile>CS Coordinator</profile>
+        <profile>CS Management</profile>
+        <profile>Vendor Community</profile>
+        <profile>National Marketing Analyst - Platform</profile>
+        <profile>Application Admin - Platform</profile>
+        <profile>Activation Manager</profile>
+        <profile>Advocacy</profile>
+        <profile>Operations%2C Admins and Reps</profile>
+        <profile>Sales Strategy</profile>
+        <profile>Company Communities User</profile>
+        <profile>Company Communities User - ServiceDesk</profile>
+        <profile>Commercial Services Management</profile>
+        <profile>GBS Analyst</profile>
+        <profile>National Account Manager - Platform</profile>
+        <profile>National Account Analyst - Platform</profile>
+        <profile>Field Marketing Director - Platform</profile>
+        <profile>Field Marketing Analyst - Platform</profile>
+        <profile>Field Marketing Manager - Platform</profile>
+        <profile>CBT Finance - Platform</profile>
+        <profile>Force%2Ecom - App Subscription User</profile>
+        <profile>Brand Manager - Platform</profile>
+    </networkMemberGroups>
+    <picassoSite>Beam_Suntory_Company_Community_C</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Beam_Suntory_Company_Community</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>company</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

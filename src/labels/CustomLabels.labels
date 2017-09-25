@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Add_Another_PO_Text</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Another PO Text</shortDescription>
+        <value>Purchase Orders.  If you&apos;d like to add another, please respond &apos;Yes&apos; below:</value>
+    </labels>
+    <labels>
+        <fullName>Add_Another_Purchase_Order</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Another Purchase Order</shortDescription>
+        <value>Add Another Purchase Order</value>
+    </labels>
+    <labels>
+        <fullName>AperityLink</fullName>
+        <categories>aperitymobile, salesforce1 action</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AperityLink</shortDescription>
+        <value>https://mstr.beam2.aperity.com:443/MicroStrategy/asp/Main.aspx?evt=2048001&amp;src=Main.aspx.2048001&amp;visMode=0&amp;currentViewMedia=2&amp;documentID=41DAA8F340076DABA08F4684C7BB6E86&amp;server=BEAMPRDISVR3&amp;Project=Aperity%20Mobile%206.0&amp;port=0&amp;share=1&amp;valuePromptAnswers=</value>
+    </labels>
+    <labels>
+        <fullName>AperityLinkiPad</fullName>
+        <categories>aperitymobile, salesforce1 action</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AperityLinkiPad</shortDescription>
+        <value>mstr://?evt=2048001&amp;documentID=F8FA2CE948B1E905CB3B26BDFA4F799C&amp;valuePromptAnswers=</value>
+    </labels>
+    <labels>
+        <fullName>AperityLinkiPhone</fullName>
+        <categories>aperitymobile, salesforce1 action</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AperityLinkiPhone</shortDescription>
+        <value>mstr://?evt=2048001&amp;documentID=4E12F8DA4E041FAC12630A964F1920C1&amp;valuePromptAnswers=</value>
+    </labels>
+    <labels>
+        <fullName>AppropriateSLA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-SLA time</shortDescription>
+        <value>and should be actioned within the appropriate SLA time.</value>
+    </labels>
+    <labels>
+        <fullName>ApprovedClaim</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-approved claim</shortDescription>
+        <value>Approved Claim</value>
+    </labels>
+    <labels>
+        <fullName>AttachmentErrorMessage1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AttachmentErrorMessage1</shortDescription>
+        <value>Error: The file you have attempted to upload has exceeded the file size limit of 25MB</value>
+    </labels>
+    <labels>
+        <fullName>AttachmentErrorMessage2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AttachmentErrorMessage2</shortDescription>
+        <value>Error: Please upload attachments before proceeding.</value>
+    </labels>
+    <labels>
+        <fullName>Attachment_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment Header</shortDescription>
+        <value>Attach Documentation</value>
+    </labels>
+    <labels>
+        <fullName>Attachment_Instructions_Order</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment Instructions Order</shortDescription>
+        <value>For Order Claims that are for Overage, Damage or Mis-Shipment, please upload a photo(s) of the product(s) related to your claim here.</value>
+    </labels>
+    <labels>
+        <fullName>Attachment_Instructions_Order_Claim</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment Instructions Order Claim</shortDescription>
+        <value>For Order Claims that are for Overage, Damage or Mis-Shipment, please upload a photo(s) of the product(s) related to your claim here.</value>
+    </labels>
+    <labels>
+        <fullName>Attachment_Instructions_Quality_Claim</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment Instructions Quality Claim</shortDescription>
+        <value>For Quality Claims, please upload a photo(s) related to your claim. For examples of lot code pictures, please click this link to view them in the FAQ section.</value>
+    </labels>
+    <labels>
+        <fullName>Availability_Date_Known</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Availability Date Known?</shortDescription>
+        <value>Availability Date Known?</value>
+    </labels>
+    <labels>
+        <fullName>Barrel_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Barrel Number</shortDescription>
+        <value>Barrel Number</value>
+    </labels>
+    <labels>
+        <fullName>Barrel_Order_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Barrel Order Number</shortDescription>
+        <value>Barrel Order Number</value>
+    </labels>
+    <labels>
+        <fullName>Base_Company_Community_URL</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Base Company Community URL</shortDescription>
+        <value>https://beam.force.com/company/s/case/</value>
+    </labels>
+    <labels>
+        <fullName>BeamCS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Beam CS</shortDescription>
+        <value>Beam Suntory Customer Service</value>
+    </labels>
+    <labels>
+        <fullName>CS_Flow_Case_Submission_Step_1_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS Flow - Case Submission - Step 1 Header</shortDescription>
+        <value>Step 1:  Choose Ticket Type</value>
+    </labels>
+    <labels>
+        <fullName>CS_Flow_Case_Submission_Step_1_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS Flow - Case Submission - Step 1 Sub-Header</shortDescription>
+        <value>Please indicate the type of ticket you wish to submit.  This may be an order, claim, inquiry, or change.  You will have the opportunity to provide more information about your submission on the following screens.</value>
+    </labels>
+    <labels>
+        <fullName>CS_Flow_Picklist_Option_Other</fullName>
+        <categories>CS Flow, Picklist Option, Other</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS Flow Picklist Option - Other</shortDescription>
+        <value>Other</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Traffic_Request_Description</shortDescription>
+        <value>Traffic Request Description</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Availability_Date</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Availability_Date</shortDescription>
+        <value>Availability Date</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Beam_Item_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Beam_Item_Number</shortDescription>
+        <value>Beam Suntory Item Number</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Beam_Suntory_Order_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Beam_Suntory_Order_Number</shortDescription>
+        <value>Beam Suntory Order Number</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Beam_Suntory_Order_Number_Message</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Beam_Suntory_Order_Number_Message</shortDescription>
+        <value>Providing the Beam Suntory Order Number allows us to process your request more quickly.</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Change_Multiple_Items_Text</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Change_Multiple_Items_Text</shortDescription>
+        <value>If you are submitting a change for multiple items, click on the &quot;?&quot; next to Beam Item Number and Product Description to view the format in which to do so.</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Change_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Change_Type</shortDescription>
+        <value>Change Type:</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Customer_Change_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Customer_Change_Type</shortDescription>
+        <value>Customer Change Type</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Document_Change_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Document_Change_Description</shortDescription>
+        <value>Document Change Description</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Document_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Document_Type</shortDescription>
+        <value>Document Type</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Email_Address</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Email_Address</shortDescription>
+        <value>Email Address</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Name</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Newsletter_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Newsletter_Description</shortDescription>
+        <value>Newsletter Description</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Number_of_Orders_Affected</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Number_of_Orders_Affected</shortDescription>
+        <value>Number of Orders Affected</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Other_Document_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Other_Document_Type</shortDescription>
+        <value>Other Document Type</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Other_Internal_Change</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Other_Internal_Change</shortDescription>
+        <value>Other Internal Change</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Other_Traffic_Request_Reason</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Other_Traffic_Request_Reason</shortDescription>
+        <value>Other Traffic Request Reason</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Request_Justification</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Request_Justification</shortDescription>
+        <value>Request Jusitification</value>
+    </labels>
+    <labels>
+        <fullName>CS_Label_Traffic_Request_Reason</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CS_Label_Traffic_Request_Reason</shortDescription>
+        <value>Traffic Request Reason</value>
+    </labels>
+    <labels>
+        <fullName>CalendarDataLimit</fullName>
+        <categories>Program Calendar, Data Limit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CalendarDataLimit</shortDescription>
+        <value>2000</value>
+    </labels>
+    <labels>
+        <fullName>CalendarDataLimitExceed</fullName>
+        <categories>Program Calendar, Search, Data Limit Exceed</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CalendarDataLimitExceed</shortDescription>
+        <value>Please refine the filters as current filter combination returns more records than</value>
+    </labels>
+    <labels>
+        <fullName>CalendarReportExport</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CalendarReportExport</shortDescription>
+        <value>/00Oo0000004czbq</value>
+    </labels>
+    <labels>
+        <fullName>Case</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-case</shortDescription>
+        <value>Case</value>
+    </labels>
+    <labels>
+        <fullName>CaseAssigned</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content</shortDescription>
+        <value>Your case has been assigned to</value>
+    </labels>
+    <labels>
+        <fullName>CasePickedUp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-picked up</shortDescription>
+        <value>has been picked up!</value>
+    </labels>
+    <labels>
+        <fullName>CaseResolved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email content</shortDescription>
+        <value>Your case has been resolved!</value>
+    </labels>
+    <labels>
+        <fullName>CaseResolved2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content</shortDescription>
+        <value>has been resolved.  If you feel as though this case was closed in error or there are open issues, please reply back to this email to re-open the case. Please include REOPEN CASE in the Subject Line. Thank you for contacting Beam Suntory!</value>
+    </labels>
+    <labels>
+        <fullName>Case_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Number</shortDescription>
+        <value>Case Number</value>
+    </labels>
+    <labels>
+        <fullName>Change</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Change_Label_Type_of_Change</shortDescription>
+        <value>What Type of Change?</value>
+    </labels>
+    <labels>
+        <fullName>ChangeApproved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-change approved</shortDescription>
+        <value>Change Approved.</value>
+    </labels>
+    <labels>
+        <fullName>ChangeCaseNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- Change Approval Body</shortDescription>
+        <value>We have researched your change case number</value>
+    </labels>
+    <labels>
+        <fullName>ChangeCaseNumber2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content -change approval body2</shortDescription>
+        <value>and we are able to approve your</value>
+    </labels>
+    <labels>
+        <fullName>ClaimCaseNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-Claim case</shortDescription>
+        <value>claim case number </value>
+    </labels>
+    <labels>
+        <fullName>ClaimRouting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- Claim Routing</shortDescription>
+        <value>within the next few days per the normal routing methods you are set up for.</value>
+    </labels>
+    <labels>
+        <fullName>Claim_Amount</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Claim Amount</shortDescription>
+        <value>Claim Amount</value>
+    </labels>
+    <labels>
+        <fullName>Comments_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments_Label</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>CurrencyConversionMMDD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CurrencyConversionMM/DD</shortDescription>
+        <value>01/01/</value>
+    </labels>
+    <labels>
+        <fullName>Damage_Claim_Descrip</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Damage Claim Descrip</shortDescription>
+        <value>Product you ordered arrived to your facility damaged.</value>
+    </labels>
+    <labels>
+        <fullName>Damage_Claim_Title</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Damage Claim Title</shortDescription>
+        <value>Damage Claim –</value>
+    </labels>
+    <labels>
+        <fullName>Did_you_already_log_a_case</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Did you already log a case?</shortDescription>
+        <value>Did you already log a case?</value>
+    </labels>
+    <labels>
+        <fullName>Direct_Import</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Direct Import</shortDescription>
+        <value>Direct Import?</value>
+    </labels>
+    <labels>
+        <fullName>Distributor_Currency</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Distributor Currency</shortDescription>
+        <value>Distributor Currency</value>
+    </labels>
+    <labels>
+        <fullName>EmailToCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- EmailToCase Email Template Body</shortDescription>
+        <value>Thank you for contacting Beam Suntory!  This is an automated response.  Your email has been received and will be actioned as quickly as possible.  If you need to follow up on this request, please reference the following case number</value>
+    </labels>
+    <labels>
+        <fullName>EmailToCaseSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- Email to Case- Subject Line</shortDescription>
+        <value>A case has been created for you!</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_Formatted_Label</fullName>
+        <categories>Shared</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message Formatted Label</shortDescription>
+        <value>You are required to fill out the following required fields:</value>
+    </labels>
+    <labels>
+        <fullName>Field_Length_Error_Message</fullName>
+        <categories>Shared</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Length Error Message</shortDescription>
+        <value>Max number of characters allowed:</value>
+    </labels>
+    <labels>
+        <fullName>FilesUploaded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FilesUploaded</shortDescription>
+        <value>Files Uploaded</value>
+    </labels>
+    <labels>
+        <fullName>FlowButtonAdd</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FlowButtonAdd</shortDescription>
+        <value>Add More</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Claim_Descrip</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freight Claim Descrip</shortDescription>
+        <value>An order that ships light is defined as: items not available at the time of loading and did not ship as planned, resulting in empty space on truck. Non-compliance charges are defined as: incorrect BOL, missed RDD, incorrect billing, etc.</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Claim_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freight Claim Sub Header</shortDescription>
+        <value>*If you are submitting a Detention Freight Claim, do not fill out a case. Please click on the email link to send an email to Beam Logistics:</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Claim_Title</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freight Claim Title</shortDescription>
+        <value>Freight Claim –</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Claim_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freight Claim Type</shortDescription>
+        <value>Freight Claim Type</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Breadcrumbs</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Breadcrumbs</shortDescription>
+        <value>Case Type:</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Error</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Error</shortDescription>
+        <value>You are required to fill out the following required fields:</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_1</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_1</shortDescription>
+        <value>Choose Case Type</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_2</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_2</shortDescription>
+        <value>Choose a Primary Case Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_3</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_3</shortDescription>
+        <value>Choose the Secondary Case Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_4</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_4</shortDescription>
+        <value>Complete the Form</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_5</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_5</shortDescription>
+        <value>Attach Documents</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_6</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_6</shortDescription>
+        <value>Choose the Third Case Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_Finish</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_Finish</shortDescription>
+        <value>Case</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_Finish_2</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_Finish_2</shortDescription>
+        <value>Submitted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Header_Number_of_Entries</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Header_Number_of_Entries</shortDescription>
+        <value>Please Indicate the Number of Entries</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Amount</fullName>
+        <categories>GBS_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Amount</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Balance_Due</fullName>
+        <categories>GBS_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Balance_Due</shortDescription>
+        <value>Balance Due</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Business_Phone</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Business_Phone</shortDescription>
+        <value>Business Phone</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Case_Type</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS Label Case Type</shortDescription>
+        <value>Case Type</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Check_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Check_Number</shortDescription>
+        <value>Check Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Comments</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Comments</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Corporate_Card_Application_Date</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Corporate_Card_Application_Date</shortDescription>
+        <value>Corporate Card Application Date</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Corporate_Card_Urgency_Header</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Corporate_Card_Urgency_Header</shortDescription>
+        <value>Corporate Card Request Urgency</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Corporate_Card_Urgency_Sub</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Corporate_Card_Urgency_Sub</shortDescription>
+        <value>Please indicate the urgency of your Corporate Card request.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Cost_Center</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Cost_Center</shortDescription>
+        <value>Cost Center</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Invoice_Correction_Affect_Inventory</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Invoice_Correction_Affect_Inventory</shortDescription>
+        <value>Invoice Correction Affect Inventory?</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Invoice_Date</fullName>
+        <categories>GBS_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Invoice_Date</shortDescription>
+        <value>Invoice Date</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Invoice_Number</fullName>
+        <categories>GBS_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Invoice_Number</shortDescription>
+        <value>Invoice Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Invoice_Submission_Header</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Invoice_Submission_Header</shortDescription>
+        <value>Invoice Submission Instructions</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Invoice_Submission_Instructions</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Invoice_Submission_Instructions</shortDescription>
+        <value>To submit an invoice and backup documentation, please scan to the GBS PTP mailbox: AP-PDFINVOICES@beamsuntory.com
+ 
+Submit only ONE INVOICE per email.
+
+Clicking &quot;Next&quot; will route you to the start of the Procure to Pay / Accounts Payable case submission process.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Last_4_SSN</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Last_4_SSN</shortDescription>
+        <value>Last 4 SSN</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Number_of_Invoices</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Number_of_Invoices</shortDescription>
+        <value>Number of Invoices</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Number_of_Items_Requested</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Number_of_Items_Requested</shortDescription>
+        <value>Number of Items Requested</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Number_of_Payments</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Number_of_Payments</shortDescription>
+        <value>Number of Payments</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_PO_Change</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_PO_Change</shortDescription>
+        <value>PO Change</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_PO_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_PO_Number</shortDescription>
+        <value>PO Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_PRPO_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_PRPO_Number</shortDescription>
+        <value>PR / PO Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Payment_Date</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Payment_Date</shortDescription>
+        <value>Payment Date</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Payment_Method</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Payment_Method</shortDescription>
+        <value>Payment Method</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Payment_Reference</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Payment_Reference</shortDescription>
+        <value>Payment Reference</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Primary_Category</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Primary_Category</shortDescription>
+        <value>Primary Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Request_Description</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Request_Description</shortDescription>
+        <value>Request Description</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Required_Characters</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Required_Characters</shortDescription>
+        <value>This field must contain the following number of characters:</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_SAP_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_SAP_Number</shortDescription>
+        <value>SAP Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_SKU_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label_SKU_Number</shortDescription>
+        <value>SKU Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Secondary_Category</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Secondary_Category</shortDescription>
+        <value>Secondary Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Tertiary_Category</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Tertiary_Category</shortDescription>
+        <value>Third Category</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Urgent</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Urgent</shortDescription>
+        <value>Urgent?</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Vendor_Number</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Vendor_Number</shortDescription>
+        <value>Vendor Number</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Label_Work_Address</fullName>
+        <categories>GBS Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Label_Work_Address</shortDescription>
+        <value>Work Address</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_1</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_1</shortDescription>
+        <value>Please choose the case type below that is most relevant to your request.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_2</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_2</shortDescription>
+        <value>Now, please indicate the primary category for your {!Case_Type} request</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_3</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_3</shortDescription>
+        <value>Now, please indicate the secondary category for your {!Case_Type} request.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_4</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_4</shortDescription>
+        <value>Now, please complete the following form.  Required fields are marked by a red bar.  You will have the opportunity to attach one or more documents on the following screens.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_5</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_5</shortDescription>
+        <value>Please use the module below to upload one or more documents related to this case.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_6</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_6</shortDescription>
+        <value>Now, please indicate the tertiary category for your {!Case_Type} request.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_Exit_1</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_Exit_1</shortDescription>
+        <value>You have successfully submitted your  Case.  Your Case Number is</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Sub_Exit_2</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Sub_Exit_2</shortDescription>
+        <value>.  Please click the &quot;Finish&quot; button to go directly to your Case.  Click the &quot;My Cases&quot; tab to view all of your Cases.</value>
+    </labels>
+    <labels>
+        <fullName>GBS_Suggested_Docs</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GBS_Suggested_Docs</shortDescription>
+        <value>Suggested Resources:</value>
+    </labels>
+    <labels>
+        <fullName>Inquiry_Definition</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inquiry Definition</shortDescription>
+        <value>Inquiry Definition</value>
+    </labels>
+    <labels>
+        <fullName>Inquiry_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inquiry Type</shortDescription>
+        <value>Inquiry Type</value>
+    </labels>
+    <labels>
+        <fullName>Internal_Change_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Internal Change Type</shortDescription>
+        <value>Internal Change Type</value>
+    </labels>
+    <labels>
+        <fullName>Issue_Definition_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Issue Definition Label</shortDescription>
+        <value>Issue Definition</value>
+    </labels>
+    <labels>
+        <fullName>Lot_Code_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lot Code Label</shortDescription>
+        <value>Lot Code</value>
+    </labels>
+    <labels>
+        <fullName>Market_Alert_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Market Alert Description</shortDescription>
+        <value>Market Alert Description</value>
+    </labels>
+    <labels>
+        <fullName>Mis_Ship_Descrip</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mis-Ship Descrip</shortDescription>
+        <value>An item that was not on the order and not invoiced that you received with a delivery.  For example: 110 cases of JB Apple 750ml were included with a delivery, but were not ordered on this PO.</value>
+    </labels>
+    <labels>
+        <fullName>Mis_Ship_Title</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mis-Ship Title</shortDescription>
+        <value>Mis-Shipment Claim –</value>
+    </labels>
+    <labels>
+        <fullName>New_SKU</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New SKU</shortDescription>
+        <value>New SKU</value>
+    </labels>
+    <labels>
+        <fullName>No</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>None_Picklist</fullName>
+        <categories>Shared</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>None_Picklist</shortDescription>
+        <value>--None--</value>
+    </labels>
+    <labels>
+        <fullName>Order_Information_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Information Header</shortDescription>
+        <value>Order Information</value>
+    </labels>
+    <labels>
+        <fullName>Order_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Type</shortDescription>
+        <value>What type of Order?</value>
+    </labels>
+    <labels>
+        <fullName>Orders_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Orders Label</shortDescription>
+        <value>Orders</value>
+    </labels>
+    <labels>
+        <fullName>Other_Inquiry_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Inquiry Type</shortDescription>
+        <value>Other Inquiry Type</value>
+    </labels>
+    <labels>
+        <fullName>Other_Issue_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Issue Label</shortDescription>
+        <value>Other Issue</value>
+    </labels>
+    <labels>
+        <fullName>Other_Newsletter</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Newsletter</shortDescription>
+        <value>Other Newsletter</value>
+    </labels>
+    <labels>
+        <fullName>Other_Picklist</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Picklist</shortDescription>
+        <value>Other</value>
+    </labels>
+    <labels>
+        <fullName>Overage_Claim_Descrip</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overage Claim Descrip</shortDescription>
+        <value>An item that was on the order and invoice that extra cases were received against.  For example: 110 cases of JB White 750ml were ordered and invoiced, however, 120 cases of JB White 750ml were delivered.</value>
+    </labels>
+    <labels>
+        <fullName>Overage_Claim_Title</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overage Claim Title</shortDescription>
+        <value>Overage Claim –</value>
+    </labels>
+    <labels>
+        <fullName>Overage_Disposition</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overage Disposition</shortDescription>
+        <value>Overage Disposition</value>
+    </labels>
+    <labels>
+        <fullName>PO_Number</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PO Number</shortDescription>
+        <value>PO Number</value>
+    </labels>
+    <labels>
+        <fullName>PO_Number_of_Pooled_Order</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PO Number of Pooled Order</shortDescription>
+        <value>PO Number of Pooled Order</value>
+    </labels>
+    <labels>
+        <fullName>PO_Numbers</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PO Numbers</shortDescription>
+        <value>Purchase Order Number(s)</value>
+    </labels>
+    <labels>
+        <fullName>Please_update_the_forecast</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the forecast</shortDescription>
+        <value>REMINDER: IT IS A REQUIREMENT TO CHANGE FORECAST WITH ANY CHANGE IN THE BUDGET.</value>
+    </labels>
+    <labels>
+        <fullName>Pooled</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pooled?</shortDescription>
+        <value>Pooled?</value>
+    </labels>
+    <labels>
+        <fullName>Product_Availability_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Availability Label</shortDescription>
+        <value>Product Availability</value>
+    </labels>
+    <labels>
+        <fullName>Product_Description_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Description Label</shortDescription>
+        <value>Product Description</value>
+    </labels>
+    <labels>
+        <fullName>Product_Flavor_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Flavor_Label</shortDescription>
+        <value>Product Flavor</value>
+    </labels>
+    <labels>
+        <fullName>Product_Size_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Size Label</shortDescription>
+        <value>Product Size</value>
+    </labels>
+    <labels>
+        <fullName>Purchase_Order_Number_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Purchase Order Number Label</shortDescription>
+        <value>Purchase Order Number</value>
+    </labels>
+    <labels>
+        <fullName>Quantity_Known_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quantity Known Label</shortDescription>
+        <value>Quantity Known?</value>
+    </labels>
+    <labels>
+        <fullName>Quantity_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quantity Label</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>Quantity_Type_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quantity Type Label</shortDescription>
+        <value>Quantity Type</value>
+    </labels>
+    <labels>
+        <fullName>ReceiveClaim</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-receive claim</shortDescription>
+        <value>and have approved it.  You will be receiving a</value>
+    </labels>
+    <labels>
+        <fullName>ReportURLError</fullName>
+        <categories>Program Calendar, Export, Error Message, Report</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReportURLError</shortDescription>
+        <value>Please minimize the filters. You have exceeded the maximum filter Limit for IE. To make a full export please try other browsers.</value>
+    </labels>
+    <labels>
+        <fullName>ResearchClaim</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content-approved claim</shortDescription>
+        <value>We have researched your</value>
+    </labels>
+    <labels>
+        <fullName>SKU</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SKU</shortDescription>
+        <value>SKU</value>
+    </labels>
+    <labels>
+        <fullName>SKU_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SKU Description</shortDescription>
+        <value>SKU Description</value>
+    </labels>
+    <labels>
+        <fullName>SLA14Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content 14days</shortDescription>
+        <value>You should receive a reply within 14 days.</value>
+    </labels>
+    <labels>
+        <fullName>SLA24Hours</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- 24hours</shortDescription>
+        <value>You should receive a reply within 24 hours.</value>
+    </labels>
+    <labels>
+        <fullName>Sample_Available_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sample Available Label</shortDescription>
+        <value>Sample Available</value>
+    </labels>
+    <labels>
+        <fullName>Seal_Intact</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Seal Intact?</shortDescription>
+        <value>Seal Intact?</value>
+    </labels>
+    <labels>
+        <fullName>SearchStringError</fullName>
+        <categories>Program Calendar, Search, Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchStringError</shortDescription>
+        <value>Your search term must have 2 or more characters.</value>
+    </labels>
+    <labels>
+        <fullName>Shipping_Plant_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipping Plant Label</shortDescription>
+        <value>Shipping Plant</value>
+    </labels>
+    <labels>
+        <fullName>Shortage_Claim_Descrip</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shortage Claim Descrip</shortDescription>
+        <value>An item that was on the order and invoice that the full amount was not received.  For example: 110 cases of JB Maple 750ml were ordered and invoiced, however, only 80 cases of JB Maple 750ml were delivered.</value>
+    </labels>
+    <labels>
+        <fullName>Shortage_Claim_Title</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shortage Claim Title</shortDescription>
+        <value>Shortage Claim –</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Label</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Standard Label</shortDescription>
+        <value>Standard</value>
+    </labels>
+    <labels>
+        <fullName>Step1_Form_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step1FormType</shortDescription>
+        <value>Form Type</value>
+    </labels>
+    <labels>
+        <fullName>Step_1_GBS_Label</fullName>
+        <categories>GBS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step_1_GBS_Label</shortDescription>
+        <value>GBS Team</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Change_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step_2_Change_Header</shortDescription>
+        <value>Step 2:  Choose Change Type</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Change_Sub</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step_2_Change_Sub</shortDescription>
+        <value>Please indicate the type of change you wish to submit today.</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Escalation_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Escalation Header</shortDescription>
+        <value>Step 2:  Provide Case Details</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Inquiry_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Inquiry Sub Header</shortDescription>
+        <value>Please indicate the type of inquiry you wish to submit today.</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Inquiry_Type</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Inquiry Type</shortDescription>
+        <value>Step 2: Choose Inquiry Type</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Order_Claim_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Order Claim Header</shortDescription>
+        <value>Step 2:  Choose Order Claim Type</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Order_Claim_Subheader</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Order Claim Subheader</shortDescription>
+        <value>Please indicate the type of order claim you wish to submit today.</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Order_Subheader</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Order Subheader</shortDescription>
+        <value>Please indicate the type of order you wish to submit today.  You may choose from a standard or barrel order.</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Order_Subheader_Intl</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Order Subheader Intl</shortDescription>
+        <value>Please indicate the type of order you wish to submit today.</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Order_Type_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Order Type Header</shortDescription>
+        <value>Step 2:  Choose Order Type</value>
+    </labels>
+    <labels>
+        <fullName>Step_2_Quality_Claim_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 2 Quality Claim Header</shortDescription>
+        <value>Step 2:  Provide Quality Claim Details</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Add_Purchase_Orders</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Add Purchase Orders</shortDescription>
+        <value>Step 3:  Add Purchase Orders</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Change_Claim_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Change_Claim_Header</shortDescription>
+        <value>Step 3: Provide Details Below</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Description</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3: Description</shortDescription>
+        <value>Step 3: Description</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Enter_User_Details_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Enter User Details Header</shortDescription>
+        <value>Step 3: Enter User Details </value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Enter_User_Details_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Enter User Details Sub Header</shortDescription>
+        <value>Please indicate the name and email address for the new user that needs access.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Existing_Order_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Existing Order Header</shortDescription>
+        <value>Step 3: Specify Your Exisiting Order Inquiry</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Existing_Order_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Existing Order Sub Header</shortDescription>
+        <value>Please indicate what information you would like to obtain about an existing order.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Newsletter</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Newsletter</shortDescription>
+        <value>Step 3: Enter Newsletter Details</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Product_Details_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Product Details Header</shortDescription>
+        <value>Step 3: Enter Product Details</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Product_Details_Sub_Header_1</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Product Details Sub Header 1</shortDescription>
+        <value>If you have already checked the</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Product_Details_Sub_Header_2</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Product Details Sub Header 2</shortDescription>
+        <value>for details regarding the Product Specification or Shipping Location, fill out the following information.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Specify_Inquiry_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Specify Inquiry Header</shortDescription>
+        <value>Step 3: Specify Your Inquiry</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Specify_Inquiry_SubHeader</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Specify Inquiry SubHeader</shortDescription>
+        <value>If you have an inquiry to submit that was not reflected on the previous page, please provide a brief description below.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Stir</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Stir</shortDescription>
+        <value>Step 3:  Please visit Stir</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Subheader</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Subheader</shortDescription>
+        <value>Please enter the details around your purchase order(s), with taking careful consideration to populate, at a minimum, any field marked with a red bar down the side.  Should you require the entry of more than one purchase order, select &apos;Yes&apos; in the Add Another Purchase Order? field.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_Subheader_Barrel</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 Subheader Barrel</shortDescription>
+        <value>Please enter the details around your purchase order(s), with taking careful consideration to populate, at a minimum, any field marked with a red bar down the side.</value>
+    </labels>
+    <labels>
+        <fullName>Step_3_and_4_Newsletter_Sub_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 3 and 4 Newsletter Sub Header</shortDescription>
+        <value>Please indicate the type of newsletter you are inquiring about today.</value>
+    </labels>
+    <labels>
+        <fullName>Step_4_Change_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step_4_Change_Header</shortDescription>
+        <value>Step 4: Provide Details Below</value>
+    </labels>
+    <labels>
+        <fullName>Step_4_Newsletter_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step 4 Newsletter Header</shortDescription>
+        <value>Step 4: Enter Newsletter Details</value>
+    </labels>
+    <labels>
+        <fullName>Submission_Complete_Header</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submission Complete Header</shortDescription>
+        <value>All Done!</value>
+    </labels>
+    <labels>
+        <fullName>Submission_Complete_Line_1</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submission Complete Line 1</shortDescription>
+        <value>Your ticket has been submitted.  Your case number is</value>
+    </labels>
+    <labels>
+        <fullName>Submission_Complete_Line_2</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submission Complete Line 2</shortDescription>
+        <value>Please click the Finish Button to see the Case you&apos;ve just created.  From here, you can check on the status of your case, submit comments to the Coordinator, and attach more documents.</value>
+    </labels>
+    <labels>
+        <fullName>ThankYou</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Thank You</shortDescription>
+        <value>Thank You,</value>
+    </labels>
+    <labels>
+        <fullName>Total_Purchase_Orders_Added</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Purchase Orders Added</shortDescription>
+        <value>Total Purchase Orders Added:</value>
+    </labels>
+    <labels>
+        <fullName>Type_of_Newsletter</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type of Newsletter</shortDescription>
+        <value>Type of Newsletter</value>
+    </labels>
+    <labels>
+        <fullName>Type_of_Order_Claim</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type of Order Claim</shortDescription>
+        <value>Type of Order Claim:</value>
+    </labels>
+    <labels>
+        <fullName>UploadAttachments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UploadAttachments</shortDescription>
+        <value>Upload Attachments</value>
+    </labels>
+    <labels>
+        <fullName>What_Type_of_Inquiry</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>What Type of Inquiry</shortDescription>
+        <value>What Type of Inquiry?</value>
+    </labels>
+    <labels>
+        <fullName>What_Type_of_Order_Claim</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>What Type of Order Claim?</shortDescription>
+        <value>What Type of Order Claim?</value>
+    </labels>
+    <labels>
+        <fullName>Yes</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Yes</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>You_have_already_attached</fullName>
+        <categories>CS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You have already attached</shortDescription>
+        <value>You have already attached</value>
+    </labels>
+    <labels>
+        <fullName>request</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Content- request</shortDescription>
+        <value>request, Thank you.</value>
+    </labels>
+</CustomLabels>

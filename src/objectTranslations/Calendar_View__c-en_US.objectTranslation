@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Calendar View</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Calendar Views</value>
+    </caseValues>
+    <fields>
+        <label><!-- Calendar Setting --></label>
+        <name>Calendar_Setting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Settings --></label>
+        <name>Distributor_Settings__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Query --></label>
+        <name>Filter_Query__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Default --></label>
+        <name>Is_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Perspective</masterLabel>
+            <translation><!-- Perspective --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Calendar Views --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- View Name --></label>
+        <name>View_Name__c</name>
+    </fields>
+    <layouts>
+        <layout>Calendar View Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EscalationRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <escalationRule>
+        <fullName>Normal Escalations</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <businessHoursSource>None</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Flow__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed - Abandoned</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Abandoned_Cases</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>120</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Escalated Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>120</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>ryan.poirier@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>300</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>john.candioto@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Orders&quot;,  RecordType.DeveloperName = &quot;EDI_Order&quot;  ),  OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ),   ISPICKVAL(Status, &quot;New&quot;)  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>dawn.masterson@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Order_Claim&quot; ),  OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ),  OR(  ISPICKVAL (Type,&quot;Overage Claim&quot;), ISPICKVAL (Type, &quot;Shortage Claim&quot;), ISPICKVAL (Type, &quot;Mis-Shipment Claim&quot;), ISPICKVAL (Type, &quot;Other&quot;)  ),  ISPICKVAL(Status, &quot;New&quot;)  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>dawn.masterson@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(   RecordType.DeveloperName = &quot;Order_Claim&quot;, ISPICKVAL ( Type , &quot;Damage Claim&quot;), OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ),  ISPICKVAL(Status, &quot;New&quot;)  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>180</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>dawn.masterson@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Changes&quot;  ),  OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ),  ISPICKVAL(Status, &quot;New&quot;)  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>ryan.poirier@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Quality_Claim&quot;  ),  OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ),  ISPICKVAL(Status, &quot;New&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Changes&quot;  ),  OR(  ISPICKVAL(Account.Priority_Customer__c, &quot;VIP&quot;),  ISPICKVAL(CreatedBy.Customer_Priority__c, &quot;VIP&quot;)  ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Orders,EDI Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>john.candioto@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Inquiry,Inquiry (Internal)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>ryan.poirier@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>dawn.masterson@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  OR(  RecordType.DeveloperName = &quot;Order_Claim&quot;  ),  OR(  ISPICKVAL (Type,&quot;Overage Claim&quot;),  ISPICKVAL (Type, &quot;Shortage Claim&quot;),  ISPICKVAL (Type, &quot;Mis-Shipment Claim&quot;),  ISPICKVAL (Type, &quot;Other&quot;)  ),  OR (ISBLANK( Compliant_Pro_Number__c ),  AND (  IsClosed = FALSE,  ISBLANK ( Compliant_Pro_Number__c )  )  )  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>dawn.masterson@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  RecordType.DeveloperName = &quot;Order_Claim&quot;,  ISPICKVAL (Type, &quot;Damage Claim&quot;),   OR (ISBLANK( Compliant_Pro_Number__c ),  AND (  IsClosed = FALSE,  ISBLANK ( Compliant_Pro_Number__c )  )  )  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>ryan.poirier@beamsuntory.com</notifyTo>
+                <notifyToTemplate>CS_System_Emails/Case_Escalation</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  RecordType.DeveloperName = &quot;Quality_Claim&quot;,  OR (ISBLANK( Compliant_Pro_Number__c ),  AND (  IsClosed = FALSE,  ISBLANK ( Compliant_Pro_Number__c )  )  )  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>60</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyTo>lori.biessener@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>AND(  CONTAINS(RecordType.Name, &quot;GMDM&quot;),  ISPICKVAL(Category_2__c, &quot;Formulas&quot;),  ISPICKVAL( CreatedBy.Customer_Priority__c, &quot;VIP&quot; ),  ISPICKVAL( Status, &quot;Logged&quot; ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>480</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyTo>david.young@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+            <formula>AND(    CONTAINS(RecordType.Name, &quot;GMDM&quot;),    ISPICKVAL(Category_2__c, &quot;Formulas&quot;),     ISPICKVAL( CreatedBy.Customer_Priority__c, &quot;VIP&quot; ), IsClosed = FALSE, NOT(OR(ISPICKVAL(Status,&quot;Waiting on IT&quot;),ISPICKVAL(Status,&quot;Pending CRC Approval&quot;),ISPICKVAL(Status,&quot;Waiting on 3rd Party&quot;),ISPICKVAL(Status,&quot;Waiting for Requestor&quot;))) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>1800</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyTo>david.young@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+            <formula>AND(   CONTAINS(RecordType.Name, &quot;GMDM&quot;),   ISPICKVAL(Category_2__c, &quot;Rebates&quot;), IsClosed = FALSE,  NOT(OR(ISPICKVAL(Status,&quot;Waiting on IT&quot;),ISPICKVAL(Status,&quot;Pending CRC Approval&quot;),ISPICKVAL(Status,&quot;Waiting on 3rd Party&quot;),ISPICKVAL(Status,&quot;Waiting for Requestor&quot;))) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>contains</operation>
+                <value>GMDM</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Logged</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>600</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+                <notifyEmail>lori.biessener@beamsuntory.com</notifyEmail>
+                <notifyEmail>weiloon.chee@beamsuntory.com</notifyEmail>
+                <notifyEmail>gary.lewis@beamsuntory.com</notifyEmail>
+                <notifyTo>david.young@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>1200</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyEmail>lori.biessener@beamsuntory.com</notifyEmail>
+                <notifyEmail>weiloon.chee@beamsuntory.com</notifyEmail>
+                <notifyEmail>gary.lewis@beamsuntory.com</notifyEmail>
+                <notifyTo>david.young@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+            <formula>AND(   
+CONTAINS(RecordType.Name, &quot;GMDM&quot;), 
+IsClosed = FALSE, 
+AND(
+NOT(ISPICKVAL(Status,&quot;Waiting on IT&quot;)),
+NOT(ISPICKVAL(Status,&quot;Pending CRC Approval&quot;)),
+NOT(ISPICKVAL(Status,&quot;Waiting on 3rd Party&quot;)),
+NOT(ISPICKVAL(Status,&quot;Waiting for Requestor&quot;))
+)
+)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>1440</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationAction>
+                <minutesToEscalation>1920</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+            <formula>AND( 
+CONTAINS(RecordType.Name, &quot;HR&quot;), 
+IsClosed = FALSE, 
+AND( 
+NOT(ISPICKVAL(Status,&quot;Waiting on 3rd Party&quot;)), 
+NOT(ISPICKVAL(Status,&quot;Waiting for Requestor&quot;)) 
+) 
+)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Payroll</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>1920</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Bailment Error</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Error_Type__c</field>
+                <operation>equals</operation>
+                <value>Upload Error</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>480</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Bailment Error</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Error_Type__c</field>
+                <operation>equals</operation>
+                <value>Pricing Error</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>1800</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Bailment Error</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Error_Type__c</field>
+                <operation>equals</operation>
+                <value>PGI Error</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>480</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Bailment</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>3000</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyTo>ann.guepe@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_1__c</field>
+                <operation>equals</operation>
+                <value>Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Current_Orders_Pending__c</field>
+                <operation>equals</operation>
+                <value>Yes</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>480</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_1__c</field>
+                <operation>equals</operation>
+                <value>Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Review_Type__c</field>
+                <operation>equals</operation>
+                <value>Increase Request,New Customer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Current_Orders_Pending__c</field>
+                <operation>equals</operation>
+                <value>No</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>960</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_1__c</field>
+                <operation>equals</operation>
+                <value>Credit Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Review_Type__c</field>
+                <operation>equals</operation>
+                <value>Periodic</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Current_Orders_Pending__c</field>
+                <operation>equals</operation>
+                <value>Yes</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>1440</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>OTC - Invoice Number,OTC - Correct Invoice,OTC - D2D Xfer,OTC - Invoice Request,OTC - FI Request,OTC - TPM,OTC - Commissions,OTC - Manual Invoice Request,OTC - Cancellation,OTC - Resend Auto Invoice</value>
+            </criteriaItems>
+            <escalationAction>
+                <minutesToEscalation>3600</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyTo>ann.guepe@beamsuntory.com</notifyTo>
+                <notifyToTemplate>GBS_System_Emails/Case_Escalated</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+    </escalationRule>
+</EscalationRules>

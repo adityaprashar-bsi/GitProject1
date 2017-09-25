@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Check Out Reason --></label>
+        <name>Check_Out_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Close of Business</masterLabel>
+            <translation><!-- Close of Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lunch</masterLabel>
+            <translation><!-- Lunch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting</masterLabel>
+            <translation><!-- Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PTO</masterLabel>
+            <translation><!-- PTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project</masterLabel>
+            <translation><!-- Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Checked-In --></label>
+        <name>Checked_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status --></label>
+        <name>Current_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>Employee__c</name>
+        <relationshipLabel><!-- Time Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Time Checked-In --></label>
+        <name>Last_Time_Checked_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Time Checked-Out --></label>
+        <name>Last_Time_Checked_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Log Action --></label>
+        <name>Log_Action__c</name>
+        <picklistValues>
+            <masterLabel>Check-In</masterLabel>
+            <translation><!-- Check-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check-Out</masterLabel>
+            <translation><!-- Check-Out --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Admin Time Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Check-In Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Check-Out Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Check-In --></label>
+        <name>Check_In</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Check-In --></label>
+        <name>Check_In</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Check-Out --></label>
+        <name>Check_Out</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select the respective Employee name. --></errorMessage>
+        <name>Employee_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Check_In --></label>
+        <name>Check_In</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_Out --></label>
+        <name>Check_Out</name>
+    </webLinks>
+</CustomObjectTranslation>

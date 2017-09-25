@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Conversion_Rate__c</fullName>
+        <description>Currency conversion rate for selected currency to USD</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Conversion Rate</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>6</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency_Code__c</fullName>
+        <description>Currency that corresponds to the specified conversion rate</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Currency Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MXN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JPY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AUD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NZD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PHP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SGD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Effective_End_Date__c</fullName>
+        <description>The end date of the period that the exchange rate is effective for.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Effective End Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Start_Date__c</fullName>
+        <description>The beginning date of the period that the exchange rate is effective for.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Effective Start Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <label>Currency Conversion Rate</label>
+    <pluralLabel>Currency Conversion Rates</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

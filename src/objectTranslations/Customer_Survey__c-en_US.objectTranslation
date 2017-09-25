@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Surveys</value>
+    </caseValues>
+    <fields>
+        <help><!-- Additional comments / suggestions --></help>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Average of Tour and Stillhouse Ratings or just the Sthillhouse Ratings if a Tour wasn&apos;t taken --></help>
+        <label><!-- Composite Rating --></label>
+        <name>Composite_Rating__c</name>
+    </fields>
+    <fields>
+        <help><!-- Participant provided email address --></help>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Would you like information on special events? --></help>
+        <label><!-- Email Opt-In Special Events --></label>
+        <name>Email_Opt_In_Special_Events__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rate the food quality at Fred&apos;s Smokehouse
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Food Rating --></label>
+        <name>Food_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Rate the selection of the gift shop merchandise
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Gift Shop Rating --></label>
+        <name>Gift_Shop_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Eastern Time Zone --></help>
+        <label><!-- Local Tour Date --></label>
+        <name>Local_Tour_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Eastern Time Zone --></help>
+        <label><!-- Local Tour Time --></label>
+        <name>Local_Tour_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Based on Survey Location --></help>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>American Stillhouse</masterLabel>
+            <translation><!-- American Stillhouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urban Stillhouse</masterLabel>
+            <translation><!-- Urban Stillhouse --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Overall my visit here left me feeling?
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Overall Rating --></label>
+        <name>Overall_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Overall Rating --></help>
+        <label><!-- Overall --></label>
+        <name>Overall__c</name>
+    </fields>
+    <fields>
+        <help><!-- How was your tasting experience?
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Tasting Rating --></label>
+        <name>Tasting_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How was the content of the tour?
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Tour Content Rating --></label>
+        <name>Tour_Content_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Eastern Time Zone --></help>
+        <label><!-- Tour Date Time --></label>
+        <name>Tour_Date_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- If yes, how was your tour guide?
+
+1 = Needs Work
+5 = Damn Good --></help>
+        <label><!-- Tour Guide Rating --></label>
+        <name>Tour_Guide_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Who was your tour guide? --></help>
+        <label><!-- Tour Guide --></label>
+        <name>Tour_Guide__c</name>
+    </fields>
+    <fields>
+        <help><!-- If now, why note? Other --></help>
+        <label><!-- Tour Lost Detail --></label>
+        <name>Tour_Lost_Detail__c</name>
+    </fields>
+    <fields>
+        <help><!-- If no, why not? --></help>
+        <label><!-- Tour Lost Reason --></label>
+        <name>Tour_Lost_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Didn&apos;t fit my schedule</masterLabel>
+            <translation><!-- Didn&apos;t fit my schedule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not available</masterLabel>
+            <translation><!-- Not available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Did you take the tour? --></help>
+        <label><!-- Tour --></label>
+        <name>Tour__c</name>
+    </fields>
+    <layouts>
+        <layout>Customer Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Participant --></label>
+            <section>Participant</section>
+        </sections>
+        <sections>
+            <label><!-- Tour and Stillhouse Rating --></label>
+            <section>Tour and Stillhouse Rating</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

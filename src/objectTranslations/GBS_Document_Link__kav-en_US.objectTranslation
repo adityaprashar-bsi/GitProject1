@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GBS Document Link</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GBS Document Links</value>
+    </caseValues>
+    <fields>
+        <label><!-- Document URL --></label>
+        <name>Document_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- File --></label>
+        <name>File__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <name>ValidationStatus</name>
+        <picklistValues>
+            <masterLabel>Not Validated</masterLabel>
+            <translation><!-- Not Validated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validated</masterLabel>
+            <translation><!-- Validated --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

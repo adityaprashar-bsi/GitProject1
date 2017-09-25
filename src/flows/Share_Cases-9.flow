@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>CaseSubmitterCaseShare</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Update Case Submitter</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>CaseSubmitterCaseShare</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varRequestedAction</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varRequestedAction</name>
+            <value>
+                <stringValue>1</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varContactId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varContactId</name>
+            <value>
+                <elementReference>myVariable_current.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>CaseSubmitterCaseShare</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_2_A1</name>
+        <label>Create Share Record</label>
+        <locationX>200</locationX>
+        <locationY>200</locationY>
+        <actionName>CaseSubmitterCaseShare</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>userId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>userId</name>
+            <value>
+                <elementReference>myVariable_current.CreatedBy.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varCaseOrigin</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varCaseOrigin</name>
+            <value>
+                <elementReference>myVariable_current.Origin</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseOwner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseOwner</name>
+            <value>
+                <elementReference>myVariable_current.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varRequestedAction</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varRequestedAction</name>
+            <value>
+                <stringValue>2</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>CaseSubmitterCaseShare</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Create Share Record</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>CaseSubmitterCaseShare</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varEmail</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varEmail</name>
+            <value>
+                <elementReference>myVariable_current.SuppliedEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varCaseOrigin</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varCaseOrigin</name>
+            <value>
+                <elementReference>myVariable_current.Origin</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varRequestedAction</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varRequestedAction</name>
+            <value>
+                <stringValue>2</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>CaseSubmitterCaseShare</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_4_A1</name>
+        <label>Create Share Record</label>
+        <locationX>400</locationX>
+        <locationY>200</locationY>
+        <actionName>CaseSubmitterCaseShare</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varSubmitterId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varSubmitterId</name>
+            <value>
+                <elementReference>myVariable_current.Submitter__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varRequestedAction</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varRequestedAction</name>
+            <value>
+                <stringValue>3</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseOwner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseOwner</name>
+            <value>
+                <elementReference>myVariable_current.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>caseId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>caseId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <assignments>
+        <name>myVariable_waitStartTimeAssignment</name>
+        <label>myVariable_waitStartTimeAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>myDecision</name>
+        <label>Primary Decision</label>
+        <locationX>200</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Submitter__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Set Case Submitter Ext</label>
+        </rules>
+        <rules>
+            <name>myRule_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_2</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_2_A1</targetReference>
+            </connector>
+            <label>Share Case with Case Submitter</label>
+        </rules>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Share Email-to-Case with Case Submitter</label>
+        </rules>
+        <rules>
+            <name>myRule_4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_4</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_4_A1</targetReference>
+            </connector>
+            <label>Owner Changed</label>
+        </rules>
+    </decisions>
+    <description>Creates manual share record on Cases submitted by Internal Beam Suntory to enable proper access to Case post-submission; flow will also populate the case with a link to the Submitter for reporting.</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND( 
+  ISNEW(),
+  ISBLANK( [Case].ContactId ),
+  NOT( ISPICKVAL( [Case].Origin, &quot;Email&quot; )),
+  OR(
+    [Case].RecordType.Name = &quot;RTR&quot;,
+    [Case].RecordType.Name = &quot;OTC Billing&quot;,
+    CONTAINS([Case].RecordType.Name, &quot;OTC - &quot;),
+    [Case].RecordType.Name = &quot;PTP/AP&quot;,
+    [Case].RecordType.Name = &quot;PTP/AP - PR/PO&quot;,
+    [Case].RecordType.Name = &quot;HR&quot;,
+    [Case].RecordType.Name = &quot;Payroll&quot;,
+    [Case].RecordType.Name = &quot;Inquiry&quot;,
+    [Case].RecordType.Name = &quot;Order Claim&quot;,
+    [Case].RecordType.Name = &quot;Quality Claim&quot;,
+    [Case].RecordType.Name = &quot;Changes&quot;,
+    [Case].RecordType.Name = &quot;Orders&quot;,
+    [Case].RecordType.Name = &quot;EDI Order&quot;,
+    [Case].RecordType.Name = &quot;Inquiry (Internal)&quot;,
+    [Case].RecordType.Name = &quot;Escalated Form&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Account Change/Extend&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Center Account Create&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Center Change&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Customer Hierarchy&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Customer Maintenance&quot;,
+    [Case].RecordType.Name = &quot;GMDM - EDW Mapping&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Materials&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Rebates&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Simple Request&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Vendor Maintenance&quot;,
+    [Case].RecordType.Name = &quot;GMDM&quot;,
+    [Case].RecordType.Name = &quot;T&amp;E&quot;
+  )
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_2</name>
+        <dataType>Boolean</dataType>
+        <expression>AND( 
+  ISNEW(),
+  ISBLANK( {!myVariable_current.ContactId} ),
+  NOT( ISPICKVAL( {!myVariable_current.Origin}, &quot;Email&quot; )),
+  OR(
+    {!myVariable_current.RecordType.Name} = &quot;RTR&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;OTC Billing&quot;,
+    CONTAINS({!myVariable_current.RecordType.Name}, &quot;OTC - &quot;),
+    {!myVariable_current.RecordType.Name} = &quot;PTP/AP&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;PTP/AP - PR/PO&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;HR&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Payroll&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Inquiry&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Order Claim&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Quality Claim&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Changes&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Orders&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;EDI Order&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Inquiry (Internal)&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Escalated Form&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Account Change/Extend&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Center Account Create&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Center Change&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Customer Hierarchy&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Customer Maintenance&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - EDW Mapping&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Materials&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Rebates&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Simple Request&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Vendor Maintenance&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;T&amp;E&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND( 
+  ISNEW(),
+  ISBLANK( [Case].ContactId ),
+  ISPICKVAL( [Case].Origin, &quot;Email&quot; ),
+  OR(
+    [Case].RecordType.Name = &quot;RTR&quot;,
+    [Case].RecordType.Name = &quot;OTC Billing&quot;,
+    CONTAINS([Case].RecordType.Name, &quot;OTC - &quot;),
+    [Case].RecordType.Name = &quot;PTP/AP&quot;,
+    [Case].RecordType.Name = &quot;PTP/AP - PR/PO&quot;,
+    [Case].RecordType.Name = &quot;HR&quot;,
+    [Case].RecordType.Name = &quot;Payroll&quot;,
+    [Case].RecordType.Name = &quot;Inquiry&quot;,
+    [Case].RecordType.Name = &quot;Order Claim&quot;,
+    [Case].RecordType.Name = &quot;Quality Claim&quot;,
+    [Case].RecordType.Name = &quot;Changes&quot;,
+    [Case].RecordType.Name = &quot;Orders&quot;,
+    [Case].RecordType.Name = &quot;EDI Order&quot;,
+    [Case].RecordType.Name = &quot;Inquiry (Internal)&quot;,
+    [Case].RecordType.Name = &quot;Escalated Form&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Account Change/Extend&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Center Account Create&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Center Change&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Customer Hierarchy&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Customer Maintenance&quot;,
+    [Case].RecordType.Name = &quot;GMDM - EDW Mapping&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Materials&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Rebates&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Simple Request&quot;,
+    [Case].RecordType.Name = &quot;GMDM - Vendor Maintenance&quot;,
+    [Case].RecordType.Name = &quot;GMDM&quot;,
+    [Case].RecordType.Name = &quot;T&amp;E&quot;
+  )
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>AND( 
+  ISNEW(),
+  ISBLANK( {!myVariable_current.ContactId} ),
+  ISPICKVAL( {!myVariable_current.Origin}, &quot;Email&quot; ),
+  OR(
+    {!myVariable_current.RecordType.Name} = &quot;RTR&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;OTC Billing&quot;,
+    CONTAINS({!myVariable_current.RecordType.Name}, &quot;OTC - &quot;),
+    {!myVariable_current.RecordType.Name} = &quot;PTP/AP&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;PTP/AP - PR/PO&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;HR&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Payroll&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Inquiry&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Order Claim&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Quality Claim&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Changes&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Orders&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;EDI Order&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Inquiry (Internal)&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;Escalated Form&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Account Change/Extend&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Center Account Create&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Center Change&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Customer Hierarchy&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Customer Maintenance&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - EDW Mapping&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Materials&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Rebates&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Simple Request&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM - Vendor Maintenance&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;GMDM&quot;,
+    {!myVariable_current.RecordType.Name} = &quot;T&amp;E&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND( 
+  ISCHANGED( [Case].OwnerId ), 
+  NOT(ISBLANK([Case].Submitter__c)),
+  [Case].Submitter__c.IsActive = TRUE 
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_4</name>
+        <dataType>Boolean</dataType>
+        <expression>AND( 
+  ISCHANGED( {!myVariable_current.OwnerId} ), 
+  NOT(ISBLANK({!myVariable_current.Submitter__c})),
+  {!myVariable_current.Submitter__c.IsActive} = TRUE 
+)</expression>
+    </formulas>
+    <interviewLabel>Share_Cases-9_Case</interviewLabel>
+    <label>Share Cases</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Case</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>RecursiveCountVariable</name>
+        <value>
+            <elementReference>RecursiveCountVariable</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_waitStartTimeVariable</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>RecursiveCountVariable</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+</Flow>

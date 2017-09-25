@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>http://devbeamso.beamsuntory.com/adfs/services/trust</issuer>
+    <loginUrl>https://devbeamso.beamsuntory.com/adfs/ls/</loginUrl>
+    <logoutUrl>http://stir2.beamglobal.com</logoutUrl>
+    <name>Beam Suntory</name>
+    <oauthTokenEndpoint>https://beamsuntory--BeamQA.cs21.my.salesforce.com/services/oauth2/token?so=00Dq0000000Bm4l</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <salesforceLoginUrl>https://beamsuntory--BeamQA.cs21.my.salesforce.com?so=00Dq0000000Bm4l</salesforceLoginUrl>
+    <samlEntityId>https://beamsuntory--BeamQA.cs21.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIC7jCCAdagAwIBAgIQXJls0BX4N61HHbNGCPHwsTANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDEyhBREZTIFNpZ25pbmcgLSBkZXZiZWFtc28uYmVhbXN1bnRvcnkuY29tMB4XDTE2MDMxODAxMjQ1MFoXDTE3MDMxODAxMjQ1MFowMzExMC8GA1UEAxMoQURGUyBTaWduaW5nIC0gZGV2YmVhbXNvLmJlYW1zdW50b3J5LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL6HxVOQhRNZnliKyZ5Euwan+9gKd2qL61uX98egP5GczQWFWDTpVnavIyTe9FMrYDbiwBcAcoRLntfCyJvMzg7zMDswUcfMRLd6VmZI7iblk4YzwkdvpiHIBg8RTPWfIJ7GNRHwqi1hfIf/Yf+72wxYAv5Gjbj+IpjG8DDlAfL/0gcIaL4rQMzBML4m7fYFcHYfgpnWKEnVNGPJNbsnB1x+x5w3RCOLDYXG3OG7/TejY8xbc5IwiIkIPQUdr20PDbma7ekiTCXOmDb408YWmDUsQD7Y0oX8zTlTZciPZOdLQl36MxwXTS+81ANiDm+z7YBpg6WF8D5O8HEZe1PFpqUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAUhtY4lHIoJnWUUz2w9qxq/Ikl2D+5T/FE+RVTRRyhsz72/UDqu7MVH2avy3vhC3jpQqTXCa+AwlkAtNYr/BvyYZPWyvFZmeLjiC/MUfzW4bJYMKMiaA6EXvQPHAmMSxhIPuvLJnlf2KhVBEZY6SPDn5bPgfqLfss8lU94Qp/ZmCfJvgdHJRuI4U1DL6EBCS7xQDq3oUCPQEzSuppoj/ouIgjDHes0DUEHuypTYgHovzsEGLCLpvEcM1GraZFYSN3CMuDLGvD8CgfQBCaBoyyPSkiDUmW7+m0rpQxE0qHds0jNHxgceQIcQeXfemz/iC4JAlEyZeujqwyFE+qi+6cug==</validationCert>
+</SamlSsoConfig>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Customer Survey {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Customer Survey</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Customer_Survey</name>
+        <label>Customer Survey</label>
+        <locationX>447</locationX>
+        <locationY>88</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+    </screens>
+    <startElementReference>Customer_Survey</startElementReference>
+</Flow>

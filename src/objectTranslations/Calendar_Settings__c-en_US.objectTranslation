@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Calendar Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Calendar Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- Attribute (if it is a Picklist) has color code that should be displayed on the Program Calendar and where color is defined on the native Picklist color picker --></help>
+        <label><!-- Color --></label>
+        <name>Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- SOQL filter criteria for selecting metadata API values or record values --></help>
+        <label><!-- Criteria --></label>
+        <name>Criteria__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field API Name --></help>
+        <label><!-- Field --></label>
+        <name>Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- Filter by this field --></help>
+        <label><!-- FilterBy --></label>
+        <name>FilterBy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Set default as the Filter By on initial page load --></help>
+        <label><!-- FilterDefault --></label>
+        <name>FilterDefault__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of the Filters - set to 0 if there is no Filter --></help>
+        <label><!-- FilterOrder --></label>
+        <name>FilterOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group By Default --></label>
+        <name>GroupByDefault__c</name>
+    </fields>
+    <fields>
+        <help><!-- Group by this field --></help>
+        <label><!-- GroupBy --></label>
+        <name>GroupBy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of the Groups - set to 0 if there is no Group --></help>
+        <label><!-- GroupOrder --></label>
+        <name>GroupOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mapped value from the Object&apos;s Field to the corresponding JSON existing standard field in the dhtmlxGantt code base --></help>
+        <label><!-- JSON --></label>
+        <name>JSON__c</name>
+    </fields>
+    <fields>
+        <help><!-- Label for the setting the user sees while on the Program Calendar; this may be different than the field label on the field or record --></help>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logo --></label>
+        <name>Logo__c</name>
+    </fields>
+    <fields>
+        <help><!-- Object API Name --></help>
+        <label><!-- Object --></label>
+        <name>Object__c</name>
+    </fields>
+    <fields>
+        <help><!-- Free text search by this field --></help>
+        <label><!-- SearchBy --></label>
+        <name>SearchBy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of the Searches - set to 0 if there is no Search --></help>
+        <label><!-- SearchOrder --></label>
+        <name>SearchOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sort by this field --></help>
+        <label><!-- SortBy --></label>
+        <name>SortBy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of the Sorts - set to 0 if there is no Sort --></help>
+        <label><!-- SortOrder --></label>
+        <name>SortOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field Data Definition Type if for example a Picklist (e.g. Channel) or an Record (e.g. Tags record for Brand or Territory) --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

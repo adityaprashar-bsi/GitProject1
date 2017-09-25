@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks all $ budget changes from both the Marketing Plan and Campaign objects for further reporting and tracking.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Amount_of_Adjustment__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount of Adjustment</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Plan_Transfer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Marketing Plan Transfer</label>
+        <referenceTo>MarketingPlanAdjustments__c</referenceTo>
+        <relationshipLabel>Audit Logs</relationshipLabel>
+        <relationshipName>Audit_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>New_Total_Value__c</fullName>
+        <description>Field to be used to calculate the new total value of the Marketing Plan or Campaign</description>
+        <externalId>false</externalId>
+        <label>New Total Value</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Old_Total_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Total Value</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Adjustment__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Adjustment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Related_Campaign_Record__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campaign of the adjustment</description>
+        <externalId>false</externalId>
+        <label>Related Campaign Record</label>
+        <referenceTo>Campaign__c</referenceTo>
+        <relationshipLabel>Audit Logs</relationshipLabel>
+        <relationshipName>Audit_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Marketing_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Marketing Plan of the adjustment</description>
+        <externalId>false</externalId>
+        <label>Related Marketing Plan</label>
+        <referenceTo>MarketingPlan__c</referenceTo>
+        <relationshipLabel>Audit Logs</relationshipLabel>
+        <relationshipName>Audit_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Audit Log</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Marketing_Plan_Transfer__c</columns>
+        <columns>Related_Marketing_Plan__c</columns>
+        <columns>Related_Campaign_Record__c</columns>
+        <columns>Amount_of_Adjustment__c</columns>
+        <columns>New_Total_Value__c</columns>
+        <columns>Old_Total_Value__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ADT-{000000}</displayFormat>
+        <label>Audit Log ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Audit Logs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Marketing_Plan_Transfer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Marketing_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Campaign_Record__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Amount_of_Adjustment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>New_Total_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Old_Total_Value__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Marketing_Plan_Transfer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Marketing_Plan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Campaign_Record__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Amount_of_Adjustment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>New_Total_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Old_Total_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Marketing_Plan_Transfer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Marketing_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Campaign_Record__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Amount_of_Adjustment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>New_Total_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Old_Total_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

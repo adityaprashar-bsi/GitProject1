@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time Entries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action Time --></label>
+        <name>Action_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Check-In</masterLabel>
+            <translation><!-- Check-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check-Out</masterLabel>
+            <translation><!-- Check-Out --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Check-Out Reason --></label>
+        <name>Check_Out_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>Employee__c</name>
+        <relationshipLabel><!-- Time Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- # Hours Checked-In --></label>
+        <name>Hours_Checked_In_Running__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Hours Checked-In --></label>
+        <name>Hours_Checked_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsWeekend? --></label>
+        <name>IsWeekend__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Checked-In --></label>
+        <name>Time_Checked_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Log --></label>
+        <name>Time_Log__c</name>
+        <relationshipLabel><!-- Time Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Time --></label>
+        <name>Total_Time__c</name>
+    </fields>
+    <layouts>
+        <layout>Time Entry Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
